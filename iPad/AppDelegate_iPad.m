@@ -17,6 +17,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
+	
+	[[[self swypWorkspace] view] setFrame:[self.window bounds]];
+	[self.window setRootViewController:[self swypWorkspace]];
     
     [self.window makeKeyAndVisible];
     

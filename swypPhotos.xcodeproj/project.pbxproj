@@ -18,7 +18,28 @@
 		28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */; };
 		28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEBFDC1118E19E00187D67 /* CoreData.framework */; };
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
+		680FCAF313E7575200509CF2 /* libswyp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 680FCAF213E7574F00509CF2 /* libswyp.a */; };
+		680FCC8713E769F000509CF2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680FCC8413E769F000509CF2 /* Icon@2x.png */; };
+		680FCC8813E769F000509CF2 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 680FCC8513E769F000509CF2 /* Icon.png */; };
+		680FCC8913E769F000509CF2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 680FCC8613E769F000509CF2 /* Icon-72.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		680FCAF113E7574F00509CF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680FCAED13E7574F00509CF2 /* swyp.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libswyp.a */;
+			remoteInfo = swyp;
+		};
+		680FCAFC13E7576400509CF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 680FCAED13E7574F00509CF2 /* swyp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D /* swyp */;
+			remoteInfo = swyp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +58,10 @@
 		28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate_Shared.m; path = Shared/AppDelegate_Shared.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* swypPhotos_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swypPhotos_Prefix.pch; sourceTree = "<group>"; };
+		680FCAED13E7574F00509CF2 /* swyp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = swyp.xcodeproj; path = swyp/swyp.xcodeproj; sourceTree = "<group>"; };
+		680FCC8413E769F000509CF2 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		680FCC8513E769F000509CF2 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		680FCC8613E769F000509CF2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* swypPhotos-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "swypPhotos-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +74,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */,
+				680FCAF313E7575200509CF2 /* libswyp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +113,10 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				680FCAED13E7574F00509CF2 /* swyp.xcodeproj */,
 				2860E386111B897F00E27156 /* iPhone */,
 				29B97317FDCFA39411CA2CEA /* iPad */,
+				680FCC8013E7697800509CF2 /* Resources */,
 				28EEBF621118D79A00187D67 /* Shared */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -127,6 +155,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		680FCAEE13E7574F00509CF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				680FCAF213E7574F00509CF2 /* libswyp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		680FCC8013E7697800509CF2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				680FCC8413E769F000509CF2 /* Icon@2x.png */,
+				680FCC8513E769F000509CF2 /* Icon.png */,
+				680FCC8613E769F000509CF2 /* Icon-72.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +187,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				680FCAFD13E7576400509CF2 /* PBXTargetDependency */,
 			);
 			name = swypPhotos;
 			productName = swypPhotos;
@@ -164,12 +211,28 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 680FCAEE13E7574F00509CF2 /* Products */;
+					ProjectRef = 680FCAED13E7574F00509CF2 /* swyp.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* swypPhotos */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		680FCAF213E7574F00509CF2 /* libswyp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libswyp.a;
+			remoteRef = 680FCAF113E7574F00509CF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
@@ -178,6 +241,9 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */,
 				2860E38B111B897F00E27156 /* MainWindow_iPhone.xib in Resources */,
+				680FCC8713E769F000509CF2 /* Icon@2x.png in Resources */,
+				680FCC8813E769F000509CF2 /* Icon.png in Resources */,
+				680FCC8913E769F000509CF2 /* Icon-72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +264,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		680FCAFD13E7576400509CF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = swyp;
+			targetProxy = 680FCAFC13E7576400509CF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -208,6 +282,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
+				HEADER_SEARCH_PATHS = ./swyp/;
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
 				PRODUCT_NAME = swypPhotos;
 			};
@@ -220,6 +295,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
+				HEADER_SEARCH_PATHS = ./swyp/;
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
 				PRODUCT_NAME = swypPhotos;
 				VALIDATE_PRODUCT = YES;

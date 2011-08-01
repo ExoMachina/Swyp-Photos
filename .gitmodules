@@ -1,0 +1,3 @@
+[submodule "swyp"]
+	path = swyp
+	url = gitosis@exoapps.com:swyp.git

@@ -8,14 +8,20 @@
 
 #import "AppDelegate_Shared.h"
 
+NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.main";
 
 @implementation AppDelegate_Shared
-
 @synthesize window;
-
+@synthesize swypWorkspace = _swypWorkspace;
 
 #pragma mark -
 #pragma mark Application lifecycle
+
+-(BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+	_swypWorkspace	=	[[swypWorkspaceViewController alloc] initWithContentWorkspaceID:swypPhotosWorkspaceIdentifier];
+	
+	return TRUE;
+}
 
 /**
  Save changes in the application's managed object context before the application terminates.
@@ -155,6 +161,8 @@
 
 - (void)dealloc {
     
+	SRELS(_swypWorkspace);
+	
     [managedObjectContext_ release];
     [managedObjectModel_ release];
     [persistentStoreCoordinator_ release];
