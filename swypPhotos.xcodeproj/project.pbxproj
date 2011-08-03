@@ -29,14 +29,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 680FCAED13E7574F00509CF2 /* swyp.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D /* libswyp.a */;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = swyp;
 		};
 		680FCAFC13E7576400509CF2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 680FCAED13E7574F00509CF2 /* swyp.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D /* swyp */;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = swyp;
 		};
 /* End PBXContainerItemProxy section */
