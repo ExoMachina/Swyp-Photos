@@ -30,8 +30,17 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
     [self saveContext];
 }
 
+-(void)applicationDidBecomeActive:(UIApplication *)application{
+
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+
+	[[_swypWorkspace connectionManager] startServices];
+}
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+	[[_swypWorkspace connectionManager] stopServices];
     [self saveContext];
 }
 
