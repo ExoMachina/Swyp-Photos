@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate_Shared.h"
-#import "swypOneImageFileDatasource.h"
 
 NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.main";
 
@@ -20,7 +19,6 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 
 -(BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
 	_swypWorkspace	=	[[swypWorkspaceViewController alloc] initWithContentWorkspaceID:swypPhotosWorkspaceIdentifier];
-	[[_swypWorkspace contentManager] setContentDataSource:[swypOneImageFileDatasource datasourceWithImage:[UIImage imageNamed:@"swypPhotosIconHuge.png"]]];
 	
 	return TRUE;
 }

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import <libSwyp.h>
+#import "swypPhotoArrayDatasource.h"
 
 NSString * const swypPhotosWorkspaceIdentifier;
 

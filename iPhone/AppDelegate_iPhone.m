@@ -19,6 +19,10 @@
     // Override point for customization after application launch.
     
 	[[[self swypWorkspace] view] setFrame:[self.window bounds]];
+	
+	swypPhotoArrayDatasource	* mainPhotoDataSource	=	[[swypPhotoArrayDatasource alloc] initWithImageDataArray:[NSArray arrayWithObject:UIImagePNGRepresentation([UIImage imageNamed:@"swypPhotosStylizedIconHuge.png"])]];
+	[[[self swypWorkspace] contentManager] setContentDataSource:mainPhotoDataSource];
+	SRELS(mainPhotoDataSource);
 	[self.window setRootViewController:[self swypWorkspace]];
 	
     [self.window makeKeyAndVisible];
