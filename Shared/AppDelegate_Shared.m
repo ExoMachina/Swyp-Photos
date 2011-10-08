@@ -19,6 +19,7 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 
 -(BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
 	_swypWorkspace	=	[[swypWorkspaceViewController alloc] initWithContentWorkspaceID:swypPhotosWorkspaceIdentifier];
+	[_swypWorkspace setShowContentWithoutConnection:TRUE];
 	
 	return TRUE;
 }
