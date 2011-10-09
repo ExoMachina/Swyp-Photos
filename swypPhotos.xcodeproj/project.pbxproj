@@ -22,6 +22,9 @@
 		792D5BE514153EBA0050DF57 /* swypPhotosIconHuge.png in Resources */ = {isa = PBXBuildFile; fileRef = 792D5BE414153EBA0050DF57 /* swypPhotosIconHuge.png */; };
 		792D5C2E14167BC10050DF57 /* swypPhotosStylizedIconHuge.png in Resources */ = {isa = PBXBuildFile; fileRef = 792D5C2D14167BC10050DF57 /* swypPhotosStylizedIconHuge.png */; };
 		797D7000143D04340086D446 /* swypIPhonePromptHud.png in Resources */ = {isa = PBXBuildFile; fileRef = 797D6FFF143D04340086D446 /* swypIPhonePromptHud.png */; };
+		79B6DFE91441F23700CF0A28 /* swypPhotoPlayground.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6DFE81441F23700CF0A28 /* swypPhotoPlayground.m */; };
+		79B6E0471441F94900CF0A28 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6E0461441F94800CF0A28 /* UIViewAdditions.m */; };
+		79B6E04A1441F98200CF0A28 /* exoTiledContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6E0491441F98200CF0A28 /* exoTiledContentViewController.m */; };
 		79C6E1701438EB6200920C64 /* swypDraftIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */; };
 		79C6E1721438EB7100920C64 /* swypDraftIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1711438EB7100920C64 /* swypDraftIcon114.png */; };
 		79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1731438EB9800920C64 /* swypDraftIcon72.png */; };
@@ -65,6 +68,12 @@
 		792D5BE414153EBA0050DF57 /* swypPhotosIconHuge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypPhotosIconHuge.png; sourceTree = "<group>"; };
 		792D5C2D14167BC10050DF57 /* swypPhotosStylizedIconHuge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypPhotosStylizedIconHuge.png; sourceTree = "<group>"; };
 		797D6FFF143D04340086D446 /* swypIPhonePromptHud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypIPhonePromptHud.png; sourceTree = "<group>"; };
+		79B6DFE71441F23700CF0A28 /* swypPhotoPlayground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swypPhotoPlayground.h; sourceTree = "<group>"; };
+		79B6DFE81441F23700CF0A28 /* swypPhotoPlayground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = swypPhotoPlayground.m; sourceTree = "<group>"; };
+		79B6E0451441F94800CF0A28 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		79B6E0461441F94800CF0A28 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		79B6E0481441F98200CF0A28 /* exoTiledContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exoTiledContentViewController.h; sourceTree = "<group>"; };
+		79B6E0491441F98200CF0A28 /* exoTiledContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exoTiledContentViewController.m; sourceTree = "<group>"; };
 		79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon57.png; sourceTree = "<group>"; };
 		79C6E1711438EB7100920C64 /* swypDraftIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon114.png; sourceTree = "<group>"; };
 		79C6E1731438EB9800920C64 /* swypDraftIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon72.png; sourceTree = "<group>"; };
@@ -108,6 +117,7 @@
 		28EEBF621118D79A00187D67 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				79B6DFE31441F1CE00CF0A28 /* User Interface */,
 				2819307C112F81BE00ECF9B4 /* swypPhotos.xcdatamodeld */,
 				28EEC0491118E28000187D67 /* AppDelegate_Shared.h */,
 				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
@@ -122,8 +132,8 @@
 				680FCAED13E7574F00509CF2 /* swyp.xcodeproj */,
 				2860E386111B897F00E27156 /* iPhone */,
 				29B97317FDCFA39411CA2CEA /* iPad */,
-				680FCC8013E7697800509CF2 /* Resources */,
 				28EEBF621118D79A00187D67 /* Shared */,
+				680FCC8013E7697800509CF2 /* Resources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -189,6 +199,20 @@
 			);
 			name = swypBundleResources;
 			path = swyp/swypBundleResources;
+			sourceTree = "<group>";
+		};
+		79B6DFE31441F1CE00CF0A28 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				79B6E0451441F94800CF0A28 /* UIViewAdditions.h */,
+				79B6E0461441F94800CF0A28 /* UIViewAdditions.m */,
+				79B6E0481441F98200CF0A28 /* exoTiledContentViewController.h */,
+				79B6E0491441F98200CF0A28 /* exoTiledContentViewController.m */,
+				79B6DFE71441F23700CF0A28 /* swypPhotoPlayground.h */,
+				79B6DFE81441F23700CF0A28 /* swypPhotoPlayground.m */,
+			);
+			name = "User Interface";
+			path = iPhone;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +307,9 @@
 				28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */,
 				2819307D112F81BE00ECF9B4 /* swypPhotos.xcdatamodeld in Sources */,
 				2860E38A111B897F00E27156 /* AppDelegate_iPhone.m in Sources */,
+				79B6DFE91441F23700CF0A28 /* swypPhotoPlayground.m in Sources */,
+				79B6E0471441F94900CF0A28 /* UIViewAdditions.m in Sources */,
+				79B6E04A1441F98200CF0A28 /* exoTiledContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
