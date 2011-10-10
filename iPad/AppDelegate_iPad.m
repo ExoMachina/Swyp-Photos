@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate_iPad.h"
+#import "swypPhotoPlayground.h"
 
 @implementation AppDelegate_iPad
 
@@ -22,6 +23,15 @@
 	swypPhotoArrayDatasource	* mainPhotoDataSource	=	[[swypPhotoArrayDatasource alloc] initWithImageDataArray:[NSArray arrayWithObject:UIImagePNGRepresentation([UIImage imageNamed:@"swypPhotosIconHuge.png"])]];
 	[[[self swypWorkspace] contentManager] setContentDataSource:mainPhotoDataSource];
 	SRELS(mainPhotoDataSource);
+	
+	swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] init];
+	//work on proper sizing soon
+	
+	CGRect contentRect	=	CGRectMake(0,0, [self.window bounds].size.width,[self.window bounds].size.height);
+	[contentDisplayController.view setFrame:contentRect];
+	[[[self swypWorkspace] contentManager] setContentDisplayController:contentDisplayController];
+	SRELS(contentDisplayController);
+
 
 	[self.window setRootViewController:[self swypWorkspace]];
     
