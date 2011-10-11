@@ -57,6 +57,12 @@
 		[[recognizer view] setFrame:CGRectApplyAffineTransform([[recognizer view] frame], CGAffineTransformMakeTranslation([recognizer translationInView:self.view].x, [recognizer translationInView:self.view].y))];
 		[recognizer setTranslation:CGPointZero inView:self.view];
 		
+		NSInteger pannedIndex	= [self contentIndexMatchingSwypOutView:(UIImageView*)recognizer.view];
+		if (pannedIndex != -1){
+			[_contentDisplayControllerDelegate contentAtIndex:pannedIndex wasDraggedToFrame:[recognizer.view frame] inController:self];
+		}
+
+		
 	}else if ([recognizer state] == UIGestureRecognizerStateEnded || [recognizer state] == UIGestureRecognizerStateFailed || [recognizer state] == UIGestureRecognizerStateCancelled){
 		CGPoint currentLocation		=	[[recognizer view] origin];
 		CGPoint glideLocation	 	= CGPointApplyAffineTransform(currentLocation, CGAffineTransformMakeTranslation([recognizer velocityInView:recognizer.view].x * .125, [recognizer velocityInView:recognizer.view].y * .125));
@@ -64,6 +70,11 @@
 			[[recognizer view] setOrigin:glideLocation];
 		}completion:nil];
 		
+		
+		NSInteger pannedIndex	= [self contentIndexMatchingSwypOutView:(UIImageView*)recognizer.view];
+		if (pannedIndex != -1){
+			[_contentDisplayControllerDelegate contentAtIndex:pannedIndex wasReleasedWithFrame:[recognizer.view frame] inController:self];
+		}
 	}
 }
 
@@ -95,9 +106,15 @@
 	[_viewTilesByIndex removeAllObjects];
 	[_tiledContentViewController reloadTileObjectData];
 }
--(void)	insertContentToDisplayAtIndex:		(NSUInteger)insertIndex animated:(BOOL)animate{
+-(void)	insertContentToDisplayAtIndex:		(NSUInteger)insertIndex animated:(BOOL)animate fromStartLocation:(CGPoint)startLocation{
 	[_viewTilesByIndex removeAllObjects];
 	[_tiledContentViewController reloadTileObjectData];
+
+	if (CGPointEqualToPoint(startLocation, CGPointZero) == NO){
+		UIView * viewAtIndex	=	[self viewForTileIndex:insertIndex];
+		[viewAtIndex setOrigin:startLocation];
+		[self returnContentAtIndexToNormalLocation:insertIndex animated:TRUE];
+	}
 }
 
 -(void)	setContentDisplayControllerDelegate: (id<swypContentDisplayViewControllerDelegate>)contentDisplayControllerDelegate{
