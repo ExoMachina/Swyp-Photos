@@ -88,8 +88,16 @@
 		photoTileView	=	[[UIImageView alloc] initWithImage:[_contentDisplayControllerDelegate imageForContentAtIndex:tileIndex inController:self]];
 		[photoTileView setUserInteractionEnabled:TRUE];
 		[photoTileView setBackgroundColor:[UIColor blackColor]];
-		photoTileView.layer.borderWidth			= 6;
-		photoTileView.layer.borderColor			= [[UIColor whiteColor] CGColor];
+		
+		CALayer	*layer	=	photoTileView.layer;
+		[layer setBorderColor: [[UIColor whiteColor] CGColor]];
+		[layer setBorderWidth:8.0f];
+		[layer setShadowColor: [[UIColor blackColor] CGColor]];
+		[layer setShadowOpacity:0.9f];
+		[layer setShadowOffset: CGSizeMake(1, 3)];
+		[layer setShadowRadius:4.0];
+		[photoTileView setClipsToBounds:NO];
+		
 		UIPanGestureRecognizer * dragRecognizer		=	[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(contentPanOccuredWithRecognizer:)];
 		[photoTileView addGestureRecognizer:dragRecognizer];
 		SRELS(dragRecognizer);
