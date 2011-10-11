@@ -8,18 +8,14 @@
 
 #import "AppDelegate_Shared.h"
 
-NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.main";
 
 @implementation AppDelegate_Shared
 @synthesize window;
-@synthesize swypWorkspace = _swypWorkspace;
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 -(BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
-	_swypWorkspace	=	[[swypWorkspaceViewController alloc] initWithContentWorkspaceID:swypPhotosWorkspaceIdentifier];
-	[_swypWorkspace setShowContentWithoutConnection:TRUE];
 	
 	return TRUE;
 }
@@ -37,11 +33,12 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 
-	[[_swypWorkspace connectionManager] startServices];
+	[[[selectPhotoController swypWorkspace] connectionManager] startServices];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-	[[_swypWorkspace connectionManager] stopServices];
+	[[[selectPhotoController swypWorkspace] connectionManager] stopServices];
+
     [self saveContext];
 }
 
@@ -170,8 +167,7 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 
 
 - (void)dealloc {
-    
-	SRELS(_swypWorkspace);
+    SRELS(selectPhotoController);
 	
     [managedObjectContext_ release];
     [managedObjectModel_ release];

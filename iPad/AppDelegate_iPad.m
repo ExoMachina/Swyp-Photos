@@ -19,22 +19,10 @@
     [super application:application didFinishLaunchingWithOptions:launchOptions];
     // Override point for customization after application launch.
 	
-	[[[self swypWorkspace] view] setFrame:[self.window bounds]];
-	swypPhotoArrayDatasource	* mainPhotoDataSource	=	[[swypPhotoArrayDatasource alloc] initWithImageDataArray:[NSArray arrayWithObject:UIImagePNGRepresentation([UIImage imageNamed:@"swypPhotosIconHuge.png"])]];
-	[[[self swypWorkspace] contentManager] setContentDataSource:mainPhotoDataSource];
-	SRELS(mainPhotoDataSource);
+	selectPhotoController	=	[[selectPhotoViewController alloc] initWithControllerMode:selectPhotoViewContollerModeCameraRoll];
+	[[selectPhotoController view] setFrame:[self.window bounds]];
 	
-	swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] initWithPhotoSize:CGSizeMake(225, 225)];
-	//work on proper sizing soon
-	
-	CGRect contentRect	=	CGRectMake(0,0, [self.window bounds].size.width,[self.window bounds].size.height);
-	[contentDisplayController.view setFrame:contentRect];
-	[[[self swypWorkspace] contentManager] setContentDisplayController:contentDisplayController];
-	SRELS(contentDisplayController);
-
-
-	[self.window setRootViewController:[self swypWorkspace]];
-    
+	[self.window setRootViewController:selectPhotoController];
     [self.window makeKeyAndVisible];
     
     return YES;

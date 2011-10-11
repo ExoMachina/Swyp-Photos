@@ -21,6 +21,7 @@
 		680FCAF313E7575200509CF2 /* libswyp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 680FCAF213E7574F00509CF2 /* libswyp.a */; };
 		792D5BE514153EBA0050DF57 /* swypPhotosIconHuge.png in Resources */ = {isa = PBXBuildFile; fileRef = 792D5BE414153EBA0050DF57 /* swypPhotosIconHuge.png */; };
 		792D5C2E14167BC10050DF57 /* swypPhotosStylizedIconHuge.png in Resources */ = {isa = PBXBuildFile; fileRef = 792D5C2D14167BC10050DF57 /* swypPhotosStylizedIconHuge.png */; };
+		79349760144498730059989F /* selectPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7934975F144498730059989F /* selectPhotoViewController.m */; };
 		797D7000143D04340086D446 /* swypIPhonePromptHud.png in Resources */ = {isa = PBXBuildFile; fileRef = 797D6FFF143D04340086D446 /* swypIPhonePromptHud.png */; };
 		79B6DFE91441F23700CF0A28 /* swypPhotoPlayground.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6DFE81441F23700CF0A28 /* swypPhotoPlayground.m */; };
 		79B6E0471441F94900CF0A28 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6E0461441F94800CF0A28 /* UIViewAdditions.m */; };
@@ -68,6 +69,8 @@
 		680FCAED13E7574F00509CF2 /* swyp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = swyp.xcodeproj; path = swyp/swyp.xcodeproj; sourceTree = "<group>"; };
 		792D5BE414153EBA0050DF57 /* swypPhotosIconHuge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypPhotosIconHuge.png; sourceTree = "<group>"; };
 		792D5C2D14167BC10050DF57 /* swypPhotosStylizedIconHuge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypPhotosStylizedIconHuge.png; sourceTree = "<group>"; };
+		7934975E144498730059989F /* selectPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectPhotoViewController.h; sourceTree = "<group>"; };
+		7934975F144498730059989F /* selectPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectPhotoViewController.m; sourceTree = "<group>"; };
 		797D6FFF143D04340086D446 /* swypIPhonePromptHud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypIPhonePromptHud.png; sourceTree = "<group>"; };
 		79B6DFE71441F23700CF0A28 /* swypPhotoPlayground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swypPhotoPlayground.h; sourceTree = "<group>"; };
 		79B6DFE81441F23700CF0A28 /* swypPhotoPlayground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = swypPhotoPlayground.m; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 				79B6E0491441F98200CF0A28 /* exoTiledContentViewController.m */,
 				79B6DFE71441F23700CF0A28 /* swypPhotoPlayground.h */,
 				79B6DFE81441F23700CF0A28 /* swypPhotoPlayground.m */,
+				7934975E144498730059989F /* selectPhotoViewController.h */,
+				7934975F144498730059989F /* selectPhotoViewController.m */,
 			);
 			name = "User Interface";
 			path = iPhone;
@@ -314,6 +319,7 @@
 				79B6DFE91441F23700CF0A28 /* swypPhotoPlayground.m in Sources */,
 				79B6E0471441F94900CF0A28 /* UIViewAdditions.m in Sources */,
 				79B6E04A1441F98200CF0A28 /* exoTiledContentViewController.m in Sources */,
+				79349760144498730059989F /* selectPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

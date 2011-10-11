@@ -8,24 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import <libSwyp.h>
-#import "swypPhotoArrayDatasource.h"
+#import "selectPhotoViewController.h"
+
 
 NSString * const swypPhotosWorkspaceIdentifier;
 
 @interface AppDelegate_Shared : NSObject <UIApplicationDelegate> {
-    
-	swypWorkspaceViewController * _swypWorkspace;
 	
     UIWindow *window;
     
+	selectPhotoViewController	* selectPhotoController;
+	
 @private
     NSManagedObjectContext *managedObjectContext_;
     NSManagedObjectModel *managedObjectModel_;
     NSPersistentStoreCoordinator *persistentStoreCoordinator_;
 }
 
-@property (nonatomic, readonly) swypWorkspaceViewController * swypWorkspace;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
