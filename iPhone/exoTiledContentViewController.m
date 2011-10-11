@@ -424,11 +424,13 @@
 		
 	UISwipeGestureRecognizer *swipeLeftGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(flipTilePageForward:)];
 	[swipeLeftGesture setDirection:UISwipeGestureRecognizerDirectionLeft];
+	[swipeLeftGesture setNumberOfTouchesRequired:2];
 	[self.view addGestureRecognizer:swipeLeftGesture];
 	SRELS(swipeLeftGesture);
 	
 	UISwipeGestureRecognizer *swipeRightGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(flipTilePageBack:)];
 	[swipeRightGesture setDirection:UISwipeGestureRecognizerDirectionRight];
+	[swipeRightGesture setNumberOfTouchesRequired:2];
 	[self.view addGestureRecognizer:swipeRightGesture];
 	SRELS(swipeRightGesture);
 	
