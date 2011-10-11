@@ -98,6 +98,9 @@
 		[layer setShadowOpacity:0.9f];
 		[layer setShadowOffset: CGSizeMake(1, 3)];
 		[layer setShadowRadius:4.0];
+		CGMutablePathRef shadowPath		=	CGPathCreateMutable();
+		CGPathAddRect(shadowPath, NULL, CGRectMake(0, 0, photoTileView.size.width, photoTileView.size.width));
+		[layer setShadowPath:shadowPath];
 		[photoTileView setClipsToBounds:NO];
 		
 		UIPanGestureRecognizer * dragRecognizer		=	[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(contentPanOccuredWithRecognizer:)];
