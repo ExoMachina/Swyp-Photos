@@ -17,8 +17,10 @@
 	id<swypContentDisplayViewControllerDelegate>	_contentDisplayControllerDelegate;	
 	
 	NSMutableDictionary *							_viewTilesByIndex;
+	
+	CGSize											_photoSize;
 }
--(id)		init;
+-(id)		initWithPhotoSize:(CGSize)imageSize;
 
 -(UIView*)	viewForTileIndex:(NSUInteger)tileIndex;
 -(void)		setViewTile:(UIView*)view forTileIndex: (NSUInteger)tileIndex;

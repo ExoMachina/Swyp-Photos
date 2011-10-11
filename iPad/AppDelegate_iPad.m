@@ -24,7 +24,7 @@
 	[[[self swypWorkspace] contentManager] setContentDataSource:mainPhotoDataSource];
 	SRELS(mainPhotoDataSource);
 	
-	swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] init];
+	swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] initWithPhotoSize:CGSizeMake(225, 225)];
 	//work on proper sizing soon
 	
 	CGRect contentRect	=	CGRectMake(0,0, [self.window bounds].size.width,[self.window bounds].size.height);

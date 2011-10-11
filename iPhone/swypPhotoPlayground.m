@@ -12,9 +12,11 @@
 
 
 #pragma mark UIViewController
--(id) init{
+-(id) initWithPhotoSize:(CGSize)imageSize{
 	if (self = [super initWithNibName:nil bundle:nil]){
-		_viewTilesByIndex =	[[NSMutableDictionary alloc] init];
+		_viewTilesByIndex	=	[[NSMutableDictionary alloc] init];
+		
+		_photoSize			=	imageSize;
 	}
 	return self;
 }
@@ -22,7 +24,7 @@
 	[super viewDidLoad];
 	[self.view setClipsToBounds:FALSE];
 	
-	_tiledContentViewController = [[exoTiledContentViewController alloc] initWithDisplayFrame:self.view.bounds tileContentControllerDelegate:self withCenteredTilesSized:CGSizeMake(150, 150) andMargins:CGSizeMake(30, 35)];
+	_tiledContentViewController = [[exoTiledContentViewController alloc] initWithDisplayFrame:self.view.bounds tileContentControllerDelegate:self withCenteredTilesSized:_photoSize andMargins:CGSizeMake(94, 35)];
 	[_tiledContentViewController.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
 	[_tiledContentViewController.view setClipsToBounds:FALSE];
 	[self.view addSubview:_tiledContentViewController.view];
@@ -85,7 +87,7 @@
 -(UIView*)tileViewAtIndex:(NSInteger)tileIndex forTiledContentController:(exoTiledContentViewController*)tileContentController{
 	UIImageView * photoTileView =	(UIImageView*)[self viewForTileIndex:tileIndex];
 	if (photoTileView == nil){
-		photoTileView	=	[[UIImageView alloc] initWithImage:[_contentDisplayControllerDelegate imageForContentAtIndex:tileIndex inController:self]];
+		photoTileView	=	[[UIImageView alloc] initWithImage:[_contentDisplayControllerDelegate imageForContentAtIndex:tileIndex ofMaxSize:_photoSize inController:self]];
 		[photoTileView setUserInteractionEnabled:TRUE];
 		[photoTileView setBackgroundColor:[UIColor blackColor]];
 		
