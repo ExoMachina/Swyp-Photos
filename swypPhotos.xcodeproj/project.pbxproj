@@ -32,8 +32,8 @@
 		79C6E1701438EB6200920C64 /* swypDraftIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */; };
 		79C6E1721438EB7100920C64 /* swypDraftIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1711438EB7100920C64 /* swypDraftIcon114.png */; };
 		79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1731438EB9800920C64 /* swypDraftIcon72.png */; };
-		79E328E5145776DA0028CD42 /* Alexander H. List.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 79E328E3145776DA0028CD42 /* Alexander H. List.p12 */; };
-		79E328E6145776DA0028CD42 /* AList Pad.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 79E328E4145776DA0028CD42 /* AList Pad.p12 */; };
+		79E328E5145776DA0028CD42 /* TempCertA.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 79E328E3145776DA0028CD42 /* TempCertA.p12 */; };
+		79E328E6145776DA0028CD42 /* TempCertB.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 79E328E4145776DA0028CD42 /* TempCertB.p12 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +88,8 @@
 		79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon57.png; sourceTree = "<group>"; };
 		79C6E1711438EB7100920C64 /* swypDraftIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon114.png; sourceTree = "<group>"; };
 		79C6E1731438EB9800920C64 /* swypDraftIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon72.png; sourceTree = "<group>"; };
-		79E328E3145776DA0028CD42 /* Alexander H. List.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alexander H. List.p12"; sourceTree = "<group>"; };
-		79E328E4145776DA0028CD42 /* AList Pad.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AList Pad.p12"; sourceTree = "<group>"; };
+		79E328E3145776DA0028CD42 /* TempCertA.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TempCertA.p12; sourceTree = "<group>"; };
+		79E328E4145776DA0028CD42 /* TempCertB.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TempCertB.p12; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* swypPhotos-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "swypPhotos-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,8 +224,8 @@
 		7987ACA6144CE6F300A2F4CA /* Test Crypto Files */ = {
 			isa = PBXGroup;
 			children = (
-				79E328E3145776DA0028CD42 /* Alexander H. List.p12 */,
-				79E328E4145776DA0028CD42 /* AList Pad.p12 */,
+				79E328E3145776DA0028CD42 /* TempCertA.p12 */,
+				79E328E4145776DA0028CD42 /* TempCertB.p12 */,
 			);
 			name = "Test Crypto Files";
 			sourceTree = "<group>";
@@ -323,8 +323,8 @@
 				79C6E1721438EB7100920C64 /* swypDraftIcon114.png in Resources */,
 				79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */,
 				797D7000143D04340086D446 /* swypIPhonePromptHud.png in Resources */,
-				79E328E5145776DA0028CD42 /* Alexander H. List.p12 in Resources */,
-				79E328E6145776DA0028CD42 /* AList Pad.p12 in Resources */,
+				79E328E5145776DA0028CD42 /* TempCertA.p12 in Resources */,
+				79E328E6145776DA0028CD42 /* TempCertB.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
