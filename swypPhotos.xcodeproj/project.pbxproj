@@ -23,17 +23,17 @@
 		792D5C2E14167BC10050DF57 /* swypPhotosStylizedIconHuge.png in Resources */ = {isa = PBXBuildFile; fileRef = 792D5C2D14167BC10050DF57 /* swypPhotosStylizedIconHuge.png */; };
 		79349760144498730059989F /* selectPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7934975F144498730059989F /* selectPhotoViewController.m */; };
 		797D7000143D04340086D446 /* swypIPhonePromptHud.png in Resources */ = {isa = PBXBuildFile; fileRef = 797D6FFF143D04340086D446 /* swypIPhonePromptHud.png */; };
-		7987ACA9144CE71500A2F4CA /* Alexander H. List.cert in Resources */ = {isa = PBXBuildFile; fileRef = 7987ACA7144CE71500A2F4CA /* Alexander H. List.cert */; };
 		79B6DFE91441F23700CF0A28 /* swypPhotoPlayground.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6DFE81441F23700CF0A28 /* swypPhotoPlayground.m */; };
 		79B6E0471441F94900CF0A28 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6E0461441F94800CF0A28 /* UIViewAdditions.m */; };
 		79B6E04A1441F98200CF0A28 /* exoTiledContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6E0491441F98200CF0A28 /* exoTiledContentViewController.m */; };
 		79B6E04C14426C3B00CF0A28 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B6E04B14426C3B00CF0A28 /* QuartzCore.framework */; };
+		79BDC494145A0B9E009C3541 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BDC493145A0B9E009C3541 /* Security.framework */; };
+		79BDC496145A0C2E009C3541 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BDC495145A0C2E009C3541 /* CFNetwork.framework */; };
 		79C6E1701438EB6200920C64 /* swypDraftIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */; };
 		79C6E1721438EB7100920C64 /* swypDraftIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1711438EB7100920C64 /* swypDraftIcon114.png */; };
 		79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1731438EB9800920C64 /* swypDraftIcon72.png */; };
-		79E328E01456126A0028CD42 /* Alexander H. List.key in Resources */ = {isa = PBXBuildFile; fileRef = 79E328DD1456126A0028CD42 /* Alexander H. List.key */; };
-		79E328E11456126A0028CD42 /* AList Pad.cert in Resources */ = {isa = PBXBuildFile; fileRef = 79E328DE1456126A0028CD42 /* AList Pad.cert */; };
-		79E328E21456126A0028CD42 /* AList Pad.key in Resources */ = {isa = PBXBuildFile; fileRef = 79E328DF1456126A0028CD42 /* AList Pad.key */; };
+		79E328E5145776DA0028CD42 /* Alexander H. List.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 79E328E3145776DA0028CD42 /* Alexander H. List.p12 */; };
+		79E328E6145776DA0028CD42 /* AList Pad.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 79E328E4145776DA0028CD42 /* AList Pad.p12 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +76,6 @@
 		7934975E144498730059989F /* selectPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectPhotoViewController.h; sourceTree = "<group>"; };
 		7934975F144498730059989F /* selectPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectPhotoViewController.m; sourceTree = "<group>"; };
 		797D6FFF143D04340086D446 /* swypIPhonePromptHud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypIPhonePromptHud.png; sourceTree = "<group>"; };
-		7987ACA7144CE71500A2F4CA /* Alexander H. List.cert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Alexander H. List.cert"; sourceTree = "<group>"; };
 		79B6DFE71441F23700CF0A28 /* swypPhotoPlayground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swypPhotoPlayground.h; sourceTree = "<group>"; };
 		79B6DFE81441F23700CF0A28 /* swypPhotoPlayground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = swypPhotoPlayground.m; sourceTree = "<group>"; };
 		79B6E0451441F94800CF0A28 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
@@ -84,12 +83,13 @@
 		79B6E0481441F98200CF0A28 /* exoTiledContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exoTiledContentViewController.h; sourceTree = "<group>"; };
 		79B6E0491441F98200CF0A28 /* exoTiledContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exoTiledContentViewController.m; sourceTree = "<group>"; };
 		79B6E04B14426C3B00CF0A28 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		79BDC493145A0B9E009C3541 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		79BDC495145A0C2E009C3541 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon57.png; sourceTree = "<group>"; };
 		79C6E1711438EB7100920C64 /* swypDraftIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon114.png; sourceTree = "<group>"; };
 		79C6E1731438EB9800920C64 /* swypDraftIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon72.png; sourceTree = "<group>"; };
-		79E328DD1456126A0028CD42 /* Alexander H. List.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Alexander H. List.key"; sourceTree = "<group>"; };
-		79E328DE1456126A0028CD42 /* AList Pad.cert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AList Pad.cert"; sourceTree = "<group>"; };
-		79E328DF1456126A0028CD42 /* AList Pad.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "AList Pad.key"; sourceTree = "<group>"; };
+		79E328E3145776DA0028CD42 /* Alexander H. List.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alexander H. List.p12"; sourceTree = "<group>"; };
+		79E328E4145776DA0028CD42 /* AList Pad.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AList Pad.p12"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* swypPhotos-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "swypPhotos-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +104,8 @@
 				28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */,
 				680FCAF313E7575200509CF2 /* libswyp.a in Frameworks */,
 				79B6E04C14426C3B00CF0A28 /* QuartzCore.framework in Frameworks */,
+				79BDC494145A0B9E009C3541 /* Security.framework in Frameworks */,
+				79BDC496145A0C2E009C3541 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +179,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79BDC495145A0C2E009C3541 /* CFNetwork.framework */,
+				79BDC493145A0B9E009C3541 /* Security.framework */,
 				79B6E04B14426C3B00CF0A28 /* QuartzCore.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
@@ -220,10 +224,8 @@
 		7987ACA6144CE6F300A2F4CA /* Test Crypto Files */ = {
 			isa = PBXGroup;
 			children = (
-				7987ACA7144CE71500A2F4CA /* Alexander H. List.cert */,
-				79E328DD1456126A0028CD42 /* Alexander H. List.key */,
-				79E328DE1456126A0028CD42 /* AList Pad.cert */,
-				79E328DF1456126A0028CD42 /* AList Pad.key */,
+				79E328E3145776DA0028CD42 /* Alexander H. List.p12 */,
+				79E328E4145776DA0028CD42 /* AList Pad.p12 */,
 			);
 			name = "Test Crypto Files";
 			sourceTree = "<group>";
@@ -321,10 +323,8 @@
 				79C6E1721438EB7100920C64 /* swypDraftIcon114.png in Resources */,
 				79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */,
 				797D7000143D04340086D446 /* swypIPhonePromptHud.png in Resources */,
-				7987ACA9144CE71500A2F4CA /* Alexander H. List.cert in Resources */,
-				79E328E01456126A0028CD42 /* Alexander H. List.key in Resources */,
-				79E328E11456126A0028CD42 /* AList Pad.cert in Resources */,
-				79E328E21456126A0028CD42 /* AList Pad.key in Resources */,
+				79E328E5145776DA0028CD42 /* Alexander H. List.p12 in Resources */,
+				79E328E6145776DA0028CD42 /* AList Pad.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
