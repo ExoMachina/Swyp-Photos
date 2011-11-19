@@ -32,8 +32,7 @@
 		79C6E1701438EB6200920C64 /* swypDraftIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */; };
 		79C6E1721438EB7100920C64 /* swypDraftIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1711438EB7100920C64 /* swypDraftIcon114.png */; };
 		79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1731438EB9800920C64 /* swypDraftIcon72.png */; };
-		79E328E5145776DA0028CD42 /* TempCertA.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 79E328E3145776DA0028CD42 /* TempCertA.p12 */; };
-		79E328E6145776DA0028CD42 /* TempCertB.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 79E328E4145776DA0028CD42 /* TempCertB.p12 */; };
+		79EBFC66146C78F7006BF5BD /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EBFC65146C78F7006BF5BD /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,8 +87,7 @@
 		79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon57.png; sourceTree = "<group>"; };
 		79C6E1711438EB7100920C64 /* swypDraftIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon114.png; sourceTree = "<group>"; };
 		79C6E1731438EB9800920C64 /* swypDraftIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypDraftIcon72.png; sourceTree = "<group>"; };
-		79E328E3145776DA0028CD42 /* TempCertA.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TempCertA.p12; sourceTree = "<group>"; };
-		79E328E4145776DA0028CD42 /* TempCertB.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TempCertB.p12; sourceTree = "<group>"; };
+		79EBFC65146C78F7006BF5BD /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* swypPhotos-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "swypPhotos-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +104,7 @@
 				79B6E04C14426C3B00CF0A28 /* QuartzCore.framework in Frameworks */,
 				79BDC494145A0B9E009C3541 /* Security.framework in Frameworks */,
 				79BDC496145A0C2E009C3541 /* CFNetwork.framework in Frameworks */,
+				79EBFC66146C78F7006BF5BD /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +178,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79EBFC65146C78F7006BF5BD /* CoreBluetooth.framework */,
 				79BDC495145A0C2E009C3541 /* CFNetwork.framework */,
 				79BDC493145A0B9E009C3541 /* Security.framework */,
 				79B6E04B14426C3B00CF0A28 /* QuartzCore.framework */,
@@ -201,7 +201,6 @@
 		680FCC8013E7697800509CF2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7987ACA6144CE6F300A2F4CA /* Test Crypto Files */,
 				797D6FFE143D04340086D446 /* swypBundleResources */,
 				79C6E1731438EB9800920C64 /* swypDraftIcon72.png */,
 				79C6E1711438EB7100920C64 /* swypDraftIcon114.png */,
@@ -219,15 +218,6 @@
 			);
 			name = swypBundleResources;
 			path = swyp/swypBundleResources;
-			sourceTree = "<group>";
-		};
-		7987ACA6144CE6F300A2F4CA /* Test Crypto Files */ = {
-			isa = PBXGroup;
-			children = (
-				79E328E3145776DA0028CD42 /* TempCertA.p12 */,
-				79E328E4145776DA0028CD42 /* TempCertB.p12 */,
-			);
-			name = "Test Crypto Files";
 			sourceTree = "<group>";
 		};
 		79B6DFE31441F1CE00CF0A28 /* User Interface */ = {
@@ -323,8 +313,6 @@
 				79C6E1721438EB7100920C64 /* swypDraftIcon114.png in Resources */,
 				79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */,
 				797D7000143D04340086D446 /* swypIPhonePromptHud.png in Resources */,
-				79E328E5145776DA0028CD42 /* TempCertA.p12 in Resources */,
-				79E328E6145776DA0028CD42 /* TempCertB.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

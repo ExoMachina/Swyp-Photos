@@ -30,7 +30,7 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 	
 	swypPhotoArrayDatasource * photoDataSource	= (swypPhotoArrayDatasource *)	[[[self swypWorkspace] contentManager] contentDataSource];
 	//just trust that it still is
-	[photoDataSource addPhoto:UIImagePNGRepresentation(selectedImage) atIndex:0];
+	[photoDataSource addPhoto:UIImageJPEGRepresentation(selectedImage, 1) atIndex:0];
 	
 	[self dismissModalViewControllerAnimated:TRUE];
 	
