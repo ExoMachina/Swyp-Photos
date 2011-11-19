@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <libSwyp.h>
-#import "swypPhotoArrayDatasource.h"
-
+#import <libSwyp/libSwyp.h>
 
 typedef enum{
 	selectPhotoViewContollerModeCamera,

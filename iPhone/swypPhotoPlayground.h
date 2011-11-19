@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <libSwyp.h>
+#import <libSwyp/libSwyp.h>
 #import "exoTiledContentViewController.h"
-#import "swypContentInteractionManager.h"
 
 @interface swypPhotoPlayground : UIViewController <exoTiledContentViewControllerContentDelegate,swypContentDisplayViewController>{
 	exoTiledContentViewController *					_tiledContentViewController;
