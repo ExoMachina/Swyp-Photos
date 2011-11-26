@@ -32,19 +32,26 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 	//just trust that it still is
 	[photoDataSource addPhoto:UIImageJPEGRepresentation(selectedImage, 1) atIndex:0];
 	
-	[self dismissModalViewControllerAnimated:TRUE];
-	
-	[self.view addSubview:_swypWorkspace.view];
-	[UIView animateWithDuration:.75 delay:.75 options:0 animations:^{
-		[_swypWorkspace.view setAlpha:1];
-	} completion:nil];
+	if (_imagePickerPopover){
+		[_imagePickerPopover dismissPopoverAnimated:TRUE];
+	}else{
+		[self dismissModalViewControllerAnimated:TRUE];
+		[self.view addSubview:_swypWorkspace.view];
+		[UIView animateWithDuration:.75 delay:.75 options:0 animations:^{
+			[_swypWorkspace.view setAlpha:1];
+		} completion:nil];		
+	}
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
-	[self dismissModalViewControllerAnimated:TRUE];
-	[self.view addSubview:_swypWorkspace.view];
-	[UIView animateWithDuration:.75 delay:.75 options:0 animations:^{
-		[_swypWorkspace.view setAlpha:1];
-	} completion:nil];
+	if (_imagePickerPopover){
+		[_imagePickerPopover dismissPopoverAnimated:TRUE];
+	}else{
+		[self dismissModalViewControllerAnimated:TRUE];
+		[self.view addSubview:_swypWorkspace.view];
+		[UIView animateWithDuration:.75 delay:.75 options:0 animations:^{
+			[_swypWorkspace.view setAlpha:1];
+		} completion:nil];		
+	}
 }
 
 #pragma mark swypWorkspaceDelegate
@@ -60,13 +67,25 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 	}else{
 		[imagePicker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
 	}
-	 
-	 [UIView animateWithDuration:.75 animations:^{
-		[_swypWorkspace.view setAlpha:0];
-	}completion:^(BOOL completed){
-		[_swypWorkspace.view removeFromSuperview];
-		[self presentModalViewController:imagePicker animated:TRUE];		
-	}];
+	
+	
+	if (deviceIsPad){
+		//ipads must display popover
+		if (_imagePickerPopover == nil){
+			_imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+		}
+		[_imagePickerPopover setContentViewController:imagePicker];
+		[_imagePickerPopover presentPopoverFromRect:CGRectMake(_swypWorkspace.view.frame.size.width/2, 30, _swypWorkspace.view.frame.size.width/2, _swypWorkspace.view.frame.size.height/2) inView:_swypWorkspace.view permittedArrowDirections:UIPopoverArrowDirectionLeft animated:FALSE];
+	}else{
+		[UIView animateWithDuration:.75 animations:^{
+			[_swypWorkspace.view setAlpha:0];
+		}completion:^(BOOL completed){
+			[_swypWorkspace.view removeFromSuperview];
+				[self presentModalViewController:imagePicker animated:TRUE];					
+		}];
+	}
+
+	
 }
 
 
@@ -80,6 +99,7 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
     return self;
 }
 -(void)	dealloc{
+	SRELS(_imagePickerPopover);
 	SRELS(_swypWorkspace);
 	
 	[super dealloc];
@@ -120,9 +140,23 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 	[contentDisplayController.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
 	[[[self swypWorkspace] contentManager] setContentDisplayController:contentDisplayController];
 	SRELS(contentDisplayController);
+
+
+	//if you need to display the Swyp workspace immediately,
+	//be careful that presenting a modal view before the app's view hiarchy
+	//loads causes bugs like having no subviews appear in the modal view
+	//here I've added the workspace as a subview
 	
-	
+	//hint: if you *only* add as sub-*view* then it wont receive rotation events
+	//		instead we also add as childviewcontroller
+	[self addChildViewController:_swypWorkspace];
 	[self.view addSubview:_swypWorkspace.view];
+		
+	//but you can also delay with the following cludge-ish code:
+//	NSBlockOperation *	modalPresentOp	=	[NSBlockOperation blockOperationWithBlock:^{
+//		[self presentModalViewController:_swypWorkspace animated:TRUE];
+//	}];
+//	[NSTimer scheduledTimerWithTimeInterval:.2 target:modalPresentOp selector:@selector(start) userInfo:nil repeats:NO];
 
 }
 
@@ -132,7 +166,7 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return TRUE;
 }
 
 @end

@@ -18,6 +18,8 @@ typedef enum{
 	selectPhotoViewContollerMode	_mode;
 	
 	swypWorkspaceViewController *	_swypWorkspace;
+	
+	UIPopoverController *			_imagePickerPopover;
 }
 @property (nonatomic, readonly) swypWorkspaceViewController * swypWorkspace;
 

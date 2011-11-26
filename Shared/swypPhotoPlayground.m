@@ -24,10 +24,14 @@
 	[super viewDidLoad];
 	[self.view setClipsToBounds:FALSE];
 	
-	_tiledContentViewController = [[exoTiledContentViewController alloc] initWithDisplayFrame:self.view.bounds tileContentControllerDelegate:self withCenteredTilesSized:_photoSize andMargins:CGSizeMake(94, 10)];
+	_tiledContentViewController = [[swypTiledContentViewController alloc] initWithDisplayFrame:self.view.bounds tileContentControllerDelegate:self withCenteredTilesSized:_photoSize andMargins:CGSizeMake(94, 10)];
 	[_tiledContentViewController.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
 	[_tiledContentViewController.view setClipsToBounds:FALSE];
 	[self.view addSubview:_tiledContentViewController.view];
+}
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return TRUE;
 }
 
 -(void) dealloc{
@@ -80,11 +84,11 @@
 	}
 }
 
-#pragma mark exoTiledContentViewControllerContentDelegate
--(NSInteger)tileCountForTiledContentController:(exoTiledContentViewController*)tileContentController{
+#pragma mark swypTiledContentViewControllerContentDelegate
+-(NSInteger)tileCountForTiledContentController:(swypTiledContentViewController*)tileContentController{
 	return [_contentDisplayControllerDelegate totalContentCountInController:self];
 }
--(UIView*)tileViewAtIndex:(NSInteger)tileIndex forTiledContentController:(exoTiledContentViewController*)tileContentController{
+-(UIView*)tileViewAtIndex:(NSInteger)tileIndex forTiledContentController:(swypTiledContentViewController*)tileContentController{
 	UIImageView * photoTileView =	(UIImageView*)[self viewForTileIndex:tileIndex];
 	if (photoTileView == nil){
 		photoTileView	=	[[UIImageView alloc] initWithImage:[_contentDisplayControllerDelegate imageForContentAtIndex:tileIndex ofMaxSize:_photoSize inController:self]];

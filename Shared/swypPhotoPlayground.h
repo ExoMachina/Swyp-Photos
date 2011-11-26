@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <libSwyp/libSwyp.h>
-#import "exoTiledContentViewController.h"
+#import "swypTiledContentViewController.h"
 
-@interface swypPhotoPlayground : UIViewController <exoTiledContentViewControllerContentDelegate,swypContentDisplayViewController>{
-	exoTiledContentViewController *					_tiledContentViewController;
+@interface swypPhotoPlayground : UIViewController <swypTiledContentViewControllerContentDelegate,swypContentDisplayViewController>{
+	swypTiledContentViewController *					_tiledContentViewController;
 	
 	id<swypContentDisplayViewControllerDelegate>	_contentDisplayControllerDelegate;	
 	
