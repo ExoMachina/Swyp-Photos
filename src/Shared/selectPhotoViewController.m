@@ -30,7 +30,7 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 	
 	swypPhotoArrayDatasource * photoDataSource	= (swypPhotoArrayDatasource *)	[[[self swypWorkspace] contentManager] contentDataSource];
 	//just trust that it still is
-	[photoDataSource addPhoto:UIImageJPEGRepresentation(selectedImage, 1) atIndex:0];
+	[photoDataSource addPhotoData:UIImagePNGRepresentation(selectedImage) atIndex:0];
 	
 	if (_imagePickerPopover){
 		[_imagePickerPopover dismissPopoverAnimated:TRUE];
@@ -115,7 +115,7 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 {	
     [super viewDidLoad];
 	
-	_swypWorkspace	=	[[swypWorkspaceViewController alloc] initWithContentWorkspaceID:swypPhotosWorkspaceIdentifier workspaceDelegate:self];
+	_swypWorkspace	=	[[swypWorkspaceViewController alloc] initWithWorkspaceDelegate:self];
 	[_swypWorkspace.view setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
 	[_swypWorkspace.view setFrame:self.view.bounds];
 	
@@ -166,7 +166,7 @@ NSString * const swypPhotosWorkspaceIdentifier = @"com.exomachina.swypphotos.mai
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return TRUE;
+	return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
 
 @end

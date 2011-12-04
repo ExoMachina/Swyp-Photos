@@ -33,11 +33,11 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 
-	[[[selectPhotoController swypWorkspace] connectionManager] startServices];
+	[[[grabPhotosController swypWorkspace] connectionManager] startServices];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-	[[[selectPhotoController swypWorkspace] connectionManager] stopServices];
+	[[[grabPhotosController swypWorkspace] connectionManager] stopServices];
 
     [self saveContext];
 }
@@ -167,7 +167,7 @@
 
 
 - (void)dealloc {
-    SRELS(selectPhotoController);
+    SRELS(grabPhotosController);
 	
     [managedObjectContext_ release];
     [managedObjectModel_ release];

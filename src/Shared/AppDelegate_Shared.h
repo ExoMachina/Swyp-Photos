@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "selectPhotoViewController.h"
+#import "grabPhotosViewController.h"
 
 
 NSString * const swypPhotosWorkspaceIdentifier;
@@ -17,7 +17,7 @@ NSString * const swypPhotosWorkspaceIdentifier;
 	
     UIWindow *window;
     
-	selectPhotoViewController	* selectPhotoController;
+	grabPhotosViewController	* grabPhotosController;
 	
 @private
     NSManagedObjectContext *managedObjectContext_;

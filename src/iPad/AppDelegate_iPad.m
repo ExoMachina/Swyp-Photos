@@ -1,14 +1,15 @@
 //
-//  AppDelegate_iPhone.m
+//  AppDelegate_iPad.m
 //  swypPhotos
 //
 //  Created by Alexander List on 8/1/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "AppDelegate_iPhone.h"
+#import "AppDelegate_iPad.h"
+#import "swypPhotoPlayground.h"
 
-@implementation AppDelegate_iPhone
+@implementation AppDelegate_iPad
 
 
 #pragma mark -
@@ -17,16 +18,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     [super application:application didFinishLaunchingWithOptions:launchOptions];
     // Override point for customization after application launch.
-    
 	
-	selectPhotoController	=	[[selectPhotoViewController alloc] initWithControllerMode:selectPhotoViewContollerModeCamera];
-	[[selectPhotoController view] setFrame:[self.window bounds]];
+	grabPhotosController	=	[[grabPhotosViewController alloc] init];
+	[[grabPhotosController view] setFrame:[self.window bounds]];
 	
-	[self.window setRootViewController:selectPhotoController];
+	[self.window setRootViewController:grabPhotosController];
     [self.window makeKeyAndVisible];
-    SRELS(selectPhotoController);
-	
-	
+    
     return YES;
 }
 
@@ -39,14 +37,11 @@
 }
 
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+	[super applicationDidBecomeActive:application];
     /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-     If your application supports background execution, called instead of applicationWillTerminate: when the user quits.
-
-     Superclass implementation saves changes in the application's managed object context before the application terminates.
+     Restart any tasks that were paused (or not yet started) while the application was inactive.
      */
-	[super applicationDidEnterBackground:application];
 }
 
 
@@ -55,13 +50,6 @@
      Called as part of the transition from the background to the inactive state: here you can undo many of the changes made on entering the background.
      */
 	[super applicationWillEnterForeground:application];
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     */
 }
 
 
