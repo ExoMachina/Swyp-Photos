@@ -50,6 +50,9 @@
 		79BE43AD147B2AF8004E8903 /* wifi-logo-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BE43AC147B2AF8004E8903 /* wifi-logo-disabled.png */; };
 		79C50A60148B09FE000FDCA1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C50A5F148B09FE000FDCA1 /* AssetsLibrary.framework */; };
 		79C50A63148B0AD2000FDCA1 /* grabPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C50A62148B0AD2000FDCA1 /* grabPhotosViewController.m */; };
+		79C50A6A148C1C87000FDCA1 /* swypTiledContentNextPageImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C50A68148C1C87000FDCA1 /* swypTiledContentNextPageImage.png */; };
+		79C50A6B148C1C87000FDCA1 /* swypTiledContentPreviousPageImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C50A69148C1C87000FDCA1 /* swypTiledContentPreviousPageImage.png */; };
+		79C50A6E148C2362000FDCA1 /* cameraEnabledAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C50A6D148C2362000FDCA1 /* cameraEnabledAlbumPickerController.m */; };
 		79C6E1701438EB6200920C64 /* swypDraftIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */; };
 		79C6E1721438EB7100920C64 /* swypDraftIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1711438EB7100920C64 /* swypDraftIcon114.png */; };
 		79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1731438EB9800920C64 /* swypDraftIcon72.png */; };
@@ -131,6 +134,10 @@
 		79C50A5F148B09FE000FDCA1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		79C50A61148B0AD2000FDCA1 /* grabPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = grabPhotosViewController.h; path = Shared/grabPhotosViewController.h; sourceTree = SOURCE_ROOT; };
 		79C50A62148B0AD2000FDCA1 /* grabPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = grabPhotosViewController.m; path = Shared/grabPhotosViewController.m; sourceTree = SOURCE_ROOT; };
+		79C50A68148C1C87000FDCA1 /* swypTiledContentNextPageImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypTiledContentNextPageImage.png; sourceTree = "<group>"; };
+		79C50A69148C1C87000FDCA1 /* swypTiledContentPreviousPageImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypTiledContentPreviousPageImage.png; sourceTree = "<group>"; };
+		79C50A6C148C2361000FDCA1 /* cameraEnabledAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cameraEnabledAlbumPickerController.h; sourceTree = "<group>"; };
+		79C50A6D148C2362000FDCA1 /* cameraEnabledAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cameraEnabledAlbumPickerController.m; sourceTree = "<group>"; };
 		79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypDraftIcon57.png; path = ../resource/swypDraftIcon57.png; sourceTree = "<group>"; };
 		79C6E1711438EB7100920C64 /* swypDraftIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypDraftIcon114.png; path = ../resource/swypDraftIcon114.png; sourceTree = "<group>"; };
 		79C6E1731438EB9800920C64 /* swypDraftIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypDraftIcon72.png; path = ../resource/swypDraftIcon72.png; sourceTree = "<group>"; };
@@ -281,6 +288,8 @@
 				7951A24D148B07DB003548AC /* ELCImagePickerDemoViewController.m */,
 				7951A24E148B07DB003548AC /* Overlay.png */,
 				7951A24F148B07DB003548AC /* Overlay@2x.png */,
+				79C50A6C148C2361000FDCA1 /* cameraEnabledAlbumPickerController.h */,
+				79C50A6D148C2362000FDCA1 /* cameraEnabledAlbumPickerController.m */,
 			);
 			name = ELImagePickerController;
 			path = ../lib/ELCImagePickerController/Classes;
@@ -289,6 +298,8 @@
 		797D6FFE143D04340086D446 /* swypBundleResources */ = {
 			isa = PBXGroup;
 			children = (
+				79C50A68148C1C87000FDCA1 /* swypTiledContentNextPageImage.png */,
+				79C50A69148C1C87000FDCA1 /* swypTiledContentPreviousPageImage.png */,
 				79BE439C147B1C81004E8903 /* bluetooth-logo-disabled.png */,
 				79BE439D147B1C81004E8903 /* bluetooth-logo-disabled@2x.png */,
 				79BE439E147B1C81004E8903 /* bluetooth-logo-enabled.png */,
@@ -408,6 +419,8 @@
 				7951A258148B07DB003548AC /* ELCImagePickerController.xib in Resources */,
 				7951A25B148B07DB003548AC /* Overlay.png in Resources */,
 				7951A25C148B07DB003548AC /* Overlay@2x.png in Resources */,
+				79C50A6A148C1C87000FDCA1 /* swypTiledContentNextPageImage.png in Resources */,
+				79C50A6B148C1C87000FDCA1 /* swypTiledContentPreviousPageImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +446,7 @@
 				7951A259148B07DB003548AC /* ELCImagePickerDemoAppDelegate.m in Sources */,
 				7951A25A148B07DB003548AC /* ELCImagePickerDemoViewController.m in Sources */,
 				79C50A63148B0AD2000FDCA1 /* grabPhotosViewController.m in Sources */,
+				79C50A6E148C2362000FDCA1 /* cameraEnabledAlbumPickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 //
 
 #import "grabPhotosViewController.h"
+#import "cameraEnabledAlbumPickerController.h"
+#import "ELCAssetTablePicker.h"
 
 @implementation grabPhotosViewController
 @synthesize swypWorkspace = _swypWorkspace;
@@ -27,7 +29,7 @@
 		
 		[_swypWorkspace setShowContentWithoutConnection:TRUE];
 
-		swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] initWithPhotoSize:CGSizeMake(225, 225)];
+		swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] initWithPhotoSize:CGSizeMake(200, 200)];
 		//work on proper sizing soon
 		
 		CGRect contentRect	=	CGRectMake(0,0, [self.view bounds].size.width,[self.view bounds].size.height);
@@ -39,7 +41,11 @@
 	return _swypWorkspace;
 }
 
--(void) activateSwyp{
+-(void) activateSwypButtonPressed:(id)sender{
+	if ([[_imagePicker topViewController] isKindOfClass:[ELCAssetTablePicker class]]){
+		[(ELCAssetTablePicker*)[_imagePicker topViewController] doneAction:self];
+	}
+	
 	[self presentModalViewController:[self swypWorkspace] animated:TRUE];
 }
 
@@ -51,7 +57,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
 	
-	ELCAlbumPickerController *albumController = [[ELCAlbumPickerController alloc] initWithNibName:@"ELCAlbumPickerController" bundle:[NSBundle mainBundle]];    
+	cameraEnabledAlbumPickerController *albumController = [[cameraEnabledAlbumPickerController alloc] initWithNibName:@"ELCAlbumPickerController" bundle:[NSBundle mainBundle]];    
 	_imagePicker = [[ELCImagePickerController alloc] initWithRootViewController:albumController];
     [albumController setParent:_imagePicker];
 	[_imagePicker setDelegate:self];
@@ -60,11 +66,12 @@
 	
 	[self.view addSubview:_imagePicker.view];
 	[self addChildViewController:_imagePicker];
+	SRELS(albumController);
 	
 	UIButton *	activateSwypButton	=	[UIButton buttonWithType:UIButtonTypeRoundedRect];
 	[activateSwypButton setBackgroundColor:[UIColor grayColor]];
 	[activateSwypButton setFrame:CGRectMake(0, self.view.size.height-40, self.view.size.width, 40)];
-	[activateSwypButton addTarget:self action:@selector(activateSwyp) forControlEvents:UIControlEventTouchUpInside];
+	[activateSwypButton addTarget:self action:@selector(activateSwypButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:activateSwypButton];
 }
 
@@ -81,7 +88,10 @@
 #pragma mark - PhotoArray
 - (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info{
 	
-	swypPhotoArrayDatasource *	photoDatasource	= [[swypPhotoArrayDatasource alloc] init];	
+	if (ArrayHasItems(info) == FALSE)
+		return;
+	
+	swypBackedPhotoDataSource *	photoDatasource	= [[swypBackedPhotoDataSource alloc] initWithBackingDelegate:self];	
 	for(NSDictionary *dict in info) {
 		UIImage *image =	[dict objectForKey:UIImagePickerControllerOriginalImage];
 		[photoDatasource addUIImage:image atIndex:0];
@@ -97,4 +107,22 @@
 	[self dismissModalViewControllerAnimated:TRUE];
 }
 
+-(void) swypBackedPhotoDataSourceRecievedPhoto: (UIImage*) photo withDataSource: (swypBackedPhotoDataSource*)dataSource{
+	UIImageWriteToSavedPhotosAlbum(photo, nil, nil, nil);
+	
+	UIView * flashView	= [[UIView alloc] initWithFrame:[self swypWorkspace].view.frame];
+	[flashView setBackgroundColor:[UIColor whiteColor]];
+	[flashView setAlpha:0];
+	[self.view addSubview:flashView];
+	[flashView autorelease];
+	[UIView animateWithDuration:.1 animations:^{
+		[flashView setAlpha:1];
+	}completion:^(BOOL completed){
+		[UIView animateWithDuration:.1 animations:^{
+			[flashView setAlpha:0];
+		}completion:^(BOOL completed){
+			[flashView removeFromSuperview];
+		}];
+	}];
+}
 @end

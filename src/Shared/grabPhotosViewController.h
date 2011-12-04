@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "ELCImagePickerController.h"
-#import "ELCAlbumPickerController.h"
 #import <libswyp/libswyp.h>
 
 @class grabPhotosViewController;
-@interface grabPhotosViewController : UIViewController <swypWorkspaceDelegate,ELCImagePickerControllerDelegate> {
+@interface grabPhotosViewController : UIViewController <swypWorkspaceDelegate,ELCImagePickerControllerDelegate, swypBackedPhotoDataSourceDelegate> {
 	
 	ELCImagePickerController *		_imagePicker;
 	
