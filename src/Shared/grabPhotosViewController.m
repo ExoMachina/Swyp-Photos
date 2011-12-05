@@ -27,14 +27,14 @@
 		[_swypWorkspace.view setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
 		[_swypWorkspace.view setFrame:self.view.bounds];
 		
+		//this just makes it so your photos appear in background before you swyp to another device
+		//otherwise you'll be swyping to create a connection, then swyping the image
 		[_swypWorkspace setShowContentWithoutConnection:TRUE];
 
+		//we create our favorite content display controller
+		//we'll be adding data later see (elcImagePickerController:didFinishPickingMediaWithInfo:)
 		swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] initWithPhotoSize:CGSizeMake(200, 200)];
-		//work on proper sizing soon
-		
-		CGRect contentRect	=	CGRectMake(0,0, [self.view bounds].size.width,[self.view bounds].size.height);
-		[contentDisplayController.view setFrame:contentRect];
-		[contentDisplayController.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
+
 		[[[self swypWorkspace] contentManager] setContentDisplayController:contentDisplayController];
 		SRELS(contentDisplayController);
 	}
@@ -91,12 +91,16 @@
 	if (ArrayHasItems(info) == FALSE)
 		return;
 	
+	//this data source will link to the contentdisplayview controller through the content manager
+	//We're set as a delegate so we can can save photos we receive in a very simple way,
+	//but see the protocols that swypPhotoArrayDatasource conforms to if you want to create custom data sources; EG, for core data
 	swypBackedPhotoDataSource *	photoDatasource	= [[swypBackedPhotoDataSource alloc] initWithBackingDelegate:self];	
 	for(NSDictionary *dict in info) {
 		UIImage *image =	[dict objectForKey:UIImagePickerControllerOriginalImage];
 		[photoDatasource addUIImage:image atIndex:0];
 	}
 	
+	//make sure to set the data-source! If there are bugs, you should submit a pull-request!
 	[[[self swypWorkspace] contentManager] setContentDataSource:photoDatasource];
 }
 - (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker{
