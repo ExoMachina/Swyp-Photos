@@ -68,9 +68,10 @@
 	[self addChildViewController:_imagePicker];
 	SRELS(albumController);
 	
-	UIButton *	activateSwypButton	=	[UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[activateSwypButton setBackgroundColor:[UIColor grayColor]];
-	[activateSwypButton setFrame:CGRectMake(0, self.view.size.height-40, self.view.size.width, 40)];
+	UIButton *	activateSwypButton	=	[UIButton buttonWithType:UIButtonTypeCustom];
+	UIImage *	swypActivateImage	=	[UIImage imageNamed:@"swypPhotosHud"];
+	[activateSwypButton setBackgroundImage:swypActivateImage forState:UIControlStateNormal];
+	[activateSwypButton setFrame:CGRectMake((self.view.size.width-[swypActivateImage size].width)/2, self.view.size.height-[swypActivateImage size].height, [swypActivateImage size].width, [swypActivateImage size].height)];
 	[activateSwypButton addTarget:self action:@selector(activateSwypButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:activateSwypButton];
 }
