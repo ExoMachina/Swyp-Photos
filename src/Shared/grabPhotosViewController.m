@@ -31,6 +31,13 @@
 		//otherwise you'll be swyping to create a connection, then swyping the image
 		[_swypWorkspace setShowContentWithoutConnection:TRUE];
 
+		//this data source will link to the contentdisplayview controller through the content manager
+		//We're set as a delegate so we can can save photos we receive in a very simple way,
+		//but see the protocols that swypPhotoArrayDatasource conforms to if you want to create custom data sources; EG, for core data
+		swypBackedPhotoDataSource *	photoDatasource	= [[swypBackedPhotoDataSource alloc] initWithBackingDelegate:self];	
+		//make sure to set the data-source! If there are bugs, you should submit a pull-request!
+		[[[self swypWorkspace] contentManager] setContentDataSource:photoDatasource];
+		
 		//we create our favorite content display controller
 		//we'll be adding data later see (elcImagePickerController:didFinishPickingMediaWithInfo:)
 		swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] initWithPhotoSize:CGSizeMake(200, 200)];
@@ -92,17 +99,15 @@
 	if (ArrayHasItems(info) == FALSE)
 		return;
 	
-	//this data source will link to the contentdisplayview controller through the content manager
-	//We're set as a delegate so we can can save photos we receive in a very simple way,
-	//but see the protocols that swypPhotoArrayDatasource conforms to if you want to create custom data sources; EG, for core data
-	swypBackedPhotoDataSource *	photoDatasource	= [[swypBackedPhotoDataSource alloc] initWithBackingDelegate:self];	
+	//we set the datasource above, see where we init a backed photo datasource
+	swypBackedPhotoDataSource *	photoDatasource	= (swypBackedPhotoDataSource*) [[[self swypWorkspace] contentManager] contentDataSource];
+	
+	[photoDatasource removeAllPhotos];
 	for(NSDictionary *dict in info) {
 		UIImage *image =	[dict objectForKey:UIImagePickerControllerOriginalImage];
 		[photoDatasource addUIImage:image atIndex:0];
 	}
 	
-	//make sure to set the data-source! If there are bugs, you should submit a pull-request!
-	[[[self swypWorkspace] contentManager] setContentDataSource:photoDatasource];
 }
 - (void)elcImagePickerControllerDidCancel:(ELCImagePickerController *)picker{
 	
@@ -118,12 +123,12 @@
 	UIView * flashView	= [[UIView alloc] initWithFrame:[self swypWorkspace].view.frame];
 	[flashView setBackgroundColor:[UIColor whiteColor]];
 	[flashView setAlpha:0];
-	[self.view addSubview:flashView];
+	[self.swypWorkspace.view addSubview:flashView];
 	[flashView autorelease];
-	[UIView animateWithDuration:.1 animations:^{
+	[UIView animateWithDuration:.3 animations:^{
 		[flashView setAlpha:1];
 	}completion:^(BOOL completed){
-		[UIView animateWithDuration:.1 animations:^{
+		[UIView animateWithDuration:.3 animations:^{
 			[flashView setAlpha:0];
 		}completion:^(BOOL completed){
 			[flashView removeFromSuperview];
