@@ -1,7 +1,7 @@
 Swÿp
 ===========
 
-After checkout, the swyp directory is a git submodule
+After checkout, the swyp directory is a git submodule-- see the following URL for quickstart:
 See https://github.com/exomachina/swyp for the framework's home
 
 About Swÿp
