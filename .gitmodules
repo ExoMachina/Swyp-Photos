@@ -1,6 +1,6 @@
 [submodule "swyp"]
 	path = swyp
-	url = git@github.com:ExoMachina/Swyp.git
+	url = git://github.com/ExoMachina/Swyp.git
 [submodule "lib/ELCImagePickerController"]
 	path = lib/ELCImagePickerController
-	url = https://github.com/elc/ELCImagePickerController.git
+	url = git://github.com/alist/ELCImagePickerController.git

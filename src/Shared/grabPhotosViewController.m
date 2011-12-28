@@ -92,6 +92,35 @@
     return YES;
 }
 
+#pragma mark - Image resizing for high-speed
+-(UIImage*)	constrainImage:(UIImage*)image toSize:(CGSize)maxSize{
+	if (image == nil)
+		return nil;
+	
+	CGSize oversize = CGSizeMake([image size].width - maxSize.width, [image size].height - maxSize.height);
+	
+	CGSize iconSize			=	CGSizeZero;
+	
+	if (oversize.width > 0 || oversize.height > 0){
+		if (oversize.height > oversize.width){
+			double scaleQuantity	=	maxSize.height/ image.size.height;
+			iconSize		=	CGSizeMake(scaleQuantity * image.size.width, maxSize.height);
+		}else{
+			double scaleQuantity	=	maxSize.width/ image.size.width;	
+			iconSize		=	CGSizeMake(maxSize.width, scaleQuantity * image.size.height);		
+		}
+	}else{
+		return image;
+	}
+	
+	UIGraphicsBeginImageContextWithOptions(iconSize, NO, 1);
+	[image drawInRect:CGRectMake(0,0,iconSize.width,iconSize.height)];
+	UIImage* constrainedImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	return constrainedImage;
+}
+
 #pragma mark - Delegate 
 #pragma mark - PhotoArray
 - (void)elcImagePickerController:(ELCImagePickerController *)picker didFinishPickingMediaWithInfo:(NSArray *)info{
@@ -105,7 +134,8 @@
 	[photoDatasource removeAllPhotos];
 	for(NSDictionary *dict in info) {
 		UIImage *image =	[dict objectForKey:UIImagePickerControllerOriginalImage];
-		[photoDatasource addUIImage:image atIndex:0];
+#warning: this image is so small
+		[photoDatasource addUIImage:[self constrainImage:image toSize:CGSizeMake(220, 350)] atIndex:0];
 	}
 	
 }
@@ -135,4 +165,6 @@
 		}];
 	}];
 }
+
+
 @end

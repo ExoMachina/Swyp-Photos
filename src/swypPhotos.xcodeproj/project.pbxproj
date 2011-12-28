@@ -20,7 +20,6 @@
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
 		792D5BE514153EBA0050DF57 /* swypPhotosIconHuge.png in Resources */ = {isa = PBXBuildFile; fileRef = 792D5BE414153EBA0050DF57 /* swypPhotosIconHuge.png */; };
 		792D5C2E14167BC10050DF57 /* swypPhotosStylizedIconHuge.png in Resources */ = {isa = PBXBuildFile; fileRef = 792D5C2D14167BC10050DF57 /* swypPhotosStylizedIconHuge.png */; };
-		79349760144498730059989F /* selectPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7934975F144498730059989F /* selectPhotoViewController.m */; };
 		7951A250148B07DB003548AC /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A23D148B07DB003548AC /* ELCAlbumPickerController.m */; };
 		7951A251148B07DB003548AC /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7951A23E148B07DB003548AC /* ELCAlbumPickerController.xib */; };
 		7951A252148B07DB003548AC /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A240148B07DB003548AC /* ELCAsset.m */; };
@@ -99,8 +98,6 @@
 		790A5FB414776CBF00E080EE /* swyp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = swyp.xcodeproj; path = ../lib/swyp/libSwyp/swyp.xcodeproj; sourceTree = "<group>"; };
 		792D5BE414153EBA0050DF57 /* swypPhotosIconHuge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypPhotosIconHuge.png; path = ../resource/swypPhotosIconHuge.png; sourceTree = "<group>"; };
 		792D5C2D14167BC10050DF57 /* swypPhotosStylizedIconHuge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypPhotosStylizedIconHuge.png; path = ../resource/swypPhotosStylizedIconHuge.png; sourceTree = "<group>"; };
-		7934975E144498730059989F /* selectPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = selectPhotoViewController.h; path = ../Shared/selectPhotoViewController.h; sourceTree = "<group>"; };
-		7934975F144498730059989F /* selectPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = selectPhotoViewController.m; path = ../Shared/selectPhotoViewController.m; sourceTree = "<group>"; };
 		7951A23C148B07DB003548AC /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
 		7951A23D148B07DB003548AC /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
 		7951A23E148B07DB003548AC /* ELCAlbumPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAlbumPickerController.xib; sourceTree = "<group>"; };
@@ -335,8 +332,6 @@
 				79C50A62148B0AD2000FDCA1 /* grabPhotosViewController.m */,
 				79B6E0451441F94800CF0A28 /* UIViewAdditions.h */,
 				79B6E0461441F94800CF0A28 /* UIViewAdditions.m */,
-				7934975E144498730059989F /* selectPhotoViewController.h */,
-				7934975F144498730059989F /* selectPhotoViewController.m */,
 			);
 			name = "User Interface";
 			path = iPhone;
@@ -453,7 +448,6 @@
 				2819307D112F81BE00ECF9B4 /* swypPhotos.xcdatamodeld in Sources */,
 				2860E38A111B897F00E27156 /* AppDelegate_iPhone.m in Sources */,
 				79B6E0471441F94900CF0A28 /* UIViewAdditions.m in Sources */,
-				79349760144498730059989F /* selectPhotoViewController.m in Sources */,
 				7951A250148B07DB003548AC /* ELCAlbumPickerController.m in Sources */,
 				7951A252148B07DB003548AC /* ELCAsset.m in Sources */,
 				7951A253148B07DB003548AC /* ELCAssetCell.m in Sources */,

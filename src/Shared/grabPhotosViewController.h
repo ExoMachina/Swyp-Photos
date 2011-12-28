@@ -19,4 +19,6 @@
 }
 @property (nonatomic, readonly) swypWorkspaceViewController * swypWorkspace;
 
+-(UIImage*)	constrainImage:(UIImage*)image toSize:(CGSize)maxSize;
+
 @end
