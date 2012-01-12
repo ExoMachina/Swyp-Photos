@@ -18,8 +18,6 @@
 		28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */; };
 		28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEBFDC1118E19E00187D67 /* CoreData.framework */; };
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
-		792D5BE514153EBA0050DF57 /* swypPhotosIconHuge.png in Resources */ = {isa = PBXBuildFile; fileRef = 792D5BE414153EBA0050DF57 /* swypPhotosIconHuge.png */; };
-		792D5C2E14167BC10050DF57 /* swypPhotosStylizedIconHuge.png in Resources */ = {isa = PBXBuildFile; fileRef = 792D5C2D14167BC10050DF57 /* swypPhotosStylizedIconHuge.png */; };
 		7951A250148B07DB003548AC /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A23D148B07DB003548AC /* ELCAlbumPickerController.m */; };
 		7951A251148B07DB003548AC /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7951A23E148B07DB003548AC /* ELCAlbumPickerController.xib */; };
 		7951A252148B07DB003548AC /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A240148B07DB003548AC /* ELCAsset.m */; };
@@ -36,29 +34,31 @@
 		7951A260148B08C4003548AC /* libswyp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7951A234148B06DF003548AC /* libswyp.a */; };
 		79635AD414904F820098C265 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79635AD314904F820098C265 /* SystemConfiguration.framework */; };
 		79635AD614905D8B0098C265 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79635AD514905D8B0098C265 /* CoreBluetooth.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		796B8E1314BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E0B14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png */; };
+		796B8E1414BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E0C14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png */; };
+		796B8E1514BE8F0E004FEBE3 /* connectivity-bluetooth-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E0D14BE8F0E004FEBE3 /* connectivity-bluetooth-enabled.png */; };
+		796B8E1614BE8F0E004FEBE3 /* connectivity-bluetooth-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E0E14BE8F0E004FEBE3 /* connectivity-bluetooth-enabled@2x.png */; };
+		796B8E1714BE8F0E004FEBE3 /* connectivity-world-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E0F14BE8F0E004FEBE3 /* connectivity-world-disabled.png */; };
+		796B8E1814BE8F0E004FEBE3 /* connectivity-world-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E1014BE8F0E004FEBE3 /* connectivity-world-disabled@2x.png */; };
+		796B8E1914BE8F0E004FEBE3 /* connectivity-world-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E1114BE8F0E004FEBE3 /* connectivity-world-enabled.png */; };
+		796B8E1A14BE8F0E004FEBE3 /* connectivity-world-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E1214BE8F0E004FEBE3 /* connectivity-world-enabled@2x.png */; };
 		797D7000143D04340086D446 /* swypIPhonePromptHud.png in Resources */ = {isa = PBXBuildFile; fileRef = 797D6FFF143D04340086D446 /* swypIPhonePromptHud.png */; };
 		79B6E0471441F94900CF0A28 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6E0461441F94800CF0A28 /* UIViewAdditions.m */; };
 		79B6E04C14426C3B00CF0A28 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79B6E04B14426C3B00CF0A28 /* QuartzCore.framework */; };
 		79BDC494145A0B9E009C3541 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BDC493145A0B9E009C3541 /* Security.framework */; };
 		79BDC496145A0C2E009C3541 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BDC495145A0C2E009C3541 /* CFNetwork.framework */; };
-		79BE43A4147B1C81004E8903 /* bluetooth-logo-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BE439C147B1C81004E8903 /* bluetooth-logo-disabled.png */; };
-		79BE43A5147B1C81004E8903 /* bluetooth-logo-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BE439D147B1C81004E8903 /* bluetooth-logo-disabled@2x.png */; };
 		79BE43A6147B1C81004E8903 /* bluetooth-logo-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BE439E147B1C81004E8903 /* bluetooth-logo-enabled.png */; };
 		79BE43A7147B1C81004E8903 /* bluetooth-logo-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BE439F147B1C81004E8903 /* bluetooth-logo-enabled@2x.png */; };
-		79BE43A9147B1C81004E8903 /* wifi-logo-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BE43A1147B1C81004E8903 /* wifi-logo-disabled@2x.png */; };
-		79BE43AA147B1C81004E8903 /* wifi-logo-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BE43A2147B1C81004E8903 /* wifi-logo-enabled.png */; };
-		79BE43AB147B1C81004E8903 /* wifi-logo-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BE43A3147B1C81004E8903 /* wifi-logo-enabled@2x.png */; };
-		79BE43AD147B2AF8004E8903 /* wifi-logo-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BE43AC147B2AF8004E8903 /* wifi-logo-disabled.png */; };
 		79C50A60148B09FE000FDCA1 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C50A5F148B09FE000FDCA1 /* AssetsLibrary.framework */; };
 		79C50A63148B0AD2000FDCA1 /* grabPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C50A62148B0AD2000FDCA1 /* grabPhotosViewController.m */; };
-		79C50A6A148C1C87000FDCA1 /* swypTiledContentNextPageImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C50A68148C1C87000FDCA1 /* swypTiledContentNextPageImage.png */; };
-		79C50A6B148C1C87000FDCA1 /* swypTiledContentPreviousPageImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C50A69148C1C87000FDCA1 /* swypTiledContentPreviousPageImage.png */; };
 		79C50A6E148C2362000FDCA1 /* cameraEnabledAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C50A6D148C2362000FDCA1 /* cameraEnabledAlbumPickerController.m */; };
 		79C50A83148DBC89000FDCA1 /* swypPhotosHud.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C50A81148DBC89000FDCA1 /* swypPhotosHud.png */; };
 		79C50A84148DBC89000FDCA1 /* swypPhotosHud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C50A82148DBC89000FDCA1 /* swypPhotosHud@2x.png */; };
 		79C6E1701438EB6200920C64 /* swypDraftIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */; };
 		79C6E1721438EB7100920C64 /* swypDraftIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1711438EB7100920C64 /* swypDraftIcon114.png */; };
 		79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1731438EB9800920C64 /* swypDraftIcon72.png */; };
+		79CA146114BA5E6700253F0C /* cloud-logo-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CA145D14BA5E6700253F0C /* cloud-logo-enabled.png */; };
+		79CA146214BA5E6700253F0C /* cloud-logo-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CA145E14BA5E6700253F0C /* cloud-logo-enabled@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,8 +96,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* swypPhotos_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swypPhotos_Prefix.pch; sourceTree = "<group>"; };
 		790A5FB414776CBF00E080EE /* swyp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = swyp.xcodeproj; path = ../lib/swyp/libSwyp/swyp.xcodeproj; sourceTree = "<group>"; };
-		792D5BE414153EBA0050DF57 /* swypPhotosIconHuge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypPhotosIconHuge.png; path = ../resource/swypPhotosIconHuge.png; sourceTree = "<group>"; };
-		792D5C2D14167BC10050DF57 /* swypPhotosStylizedIconHuge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypPhotosStylizedIconHuge.png; path = ../resource/swypPhotosStylizedIconHuge.png; sourceTree = "<group>"; };
 		7951A23C148B07DB003548AC /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
 		7951A23D148B07DB003548AC /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
 		7951A23E148B07DB003548AC /* ELCAlbumPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAlbumPickerController.xib; sourceTree = "<group>"; };
@@ -120,25 +118,25 @@
 		7951A24F148B07DB003548AC /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
 		79635AD314904F820098C265 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		79635AD514905D8B0098C265 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		796B8E0B14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-disabled.png"; sourceTree = "<group>"; };
+		796B8E0C14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-disabled@2x.png"; sourceTree = "<group>"; };
+		796B8E0D14BE8F0E004FEBE3 /* connectivity-bluetooth-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-enabled.png"; sourceTree = "<group>"; };
+		796B8E0E14BE8F0E004FEBE3 /* connectivity-bluetooth-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-enabled@2x.png"; sourceTree = "<group>"; };
+		796B8E0F14BE8F0E004FEBE3 /* connectivity-world-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-world-disabled.png"; sourceTree = "<group>"; };
+		796B8E1014BE8F0E004FEBE3 /* connectivity-world-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-world-disabled@2x.png"; sourceTree = "<group>"; };
+		796B8E1114BE8F0E004FEBE3 /* connectivity-world-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-world-enabled.png"; sourceTree = "<group>"; };
+		796B8E1214BE8F0E004FEBE3 /* connectivity-world-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-world-enabled@2x.png"; sourceTree = "<group>"; };
 		797D6FFF143D04340086D446 /* swypIPhonePromptHud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypIPhonePromptHud.png; sourceTree = "<group>"; };
 		79B6E0451441F94800CF0A28 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewAdditions.h; path = ../Shared/UIViewAdditions.h; sourceTree = "<group>"; };
 		79B6E0461441F94800CF0A28 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewAdditions.m; path = ../Shared/UIViewAdditions.m; sourceTree = "<group>"; };
 		79B6E04B14426C3B00CF0A28 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		79BDC493145A0B9E009C3541 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		79BDC495145A0C2E009C3541 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		79BE439C147B1C81004E8903 /* bluetooth-logo-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bluetooth-logo-disabled.png"; sourceTree = "<group>"; };
-		79BE439D147B1C81004E8903 /* bluetooth-logo-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bluetooth-logo-disabled@2x.png"; sourceTree = "<group>"; };
 		79BE439E147B1C81004E8903 /* bluetooth-logo-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bluetooth-logo-enabled.png"; sourceTree = "<group>"; };
 		79BE439F147B1C81004E8903 /* bluetooth-logo-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bluetooth-logo-enabled@2x.png"; sourceTree = "<group>"; };
-		79BE43A1147B1C81004E8903 /* wifi-logo-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi-logo-disabled@2x.png"; sourceTree = "<group>"; };
-		79BE43A2147B1C81004E8903 /* wifi-logo-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi-logo-enabled.png"; sourceTree = "<group>"; };
-		79BE43A3147B1C81004E8903 /* wifi-logo-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi-logo-enabled@2x.png"; sourceTree = "<group>"; };
-		79BE43AC147B2AF8004E8903 /* wifi-logo-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wifi-logo-disabled.png"; sourceTree = "<group>"; };
 		79C50A5F148B09FE000FDCA1 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		79C50A61148B0AD2000FDCA1 /* grabPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = grabPhotosViewController.h; path = Shared/grabPhotosViewController.h; sourceTree = SOURCE_ROOT; };
 		79C50A62148B0AD2000FDCA1 /* grabPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = grabPhotosViewController.m; path = Shared/grabPhotosViewController.m; sourceTree = SOURCE_ROOT; };
-		79C50A68148C1C87000FDCA1 /* swypTiledContentNextPageImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypTiledContentNextPageImage.png; sourceTree = "<group>"; };
-		79C50A69148C1C87000FDCA1 /* swypTiledContentPreviousPageImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypTiledContentPreviousPageImage.png; sourceTree = "<group>"; };
 		79C50A6C148C2361000FDCA1 /* cameraEnabledAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cameraEnabledAlbumPickerController.h; sourceTree = "<group>"; };
 		79C50A6D148C2362000FDCA1 /* cameraEnabledAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cameraEnabledAlbumPickerController.m; sourceTree = "<group>"; };
 		79C50A81148DBC89000FDCA1 /* swypPhotosHud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypPhotosHud.png; sourceTree = "<group>"; };
@@ -146,6 +144,8 @@
 		79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypDraftIcon57.png; path = ../resource/swypDraftIcon57.png; sourceTree = "<group>"; };
 		79C6E1711438EB7100920C64 /* swypDraftIcon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypDraftIcon114.png; path = ../resource/swypDraftIcon114.png; sourceTree = "<group>"; };
 		79C6E1731438EB9800920C64 /* swypDraftIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypDraftIcon72.png; path = ../resource/swypDraftIcon72.png; sourceTree = "<group>"; };
+		79CA145D14BA5E6700253F0C /* cloud-logo-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-logo-enabled.png"; sourceTree = "<group>"; };
+		79CA145E14BA5E6700253F0C /* cloud-logo-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-logo-enabled@2x.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* swypPhotos-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "swypPhotos-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -260,8 +260,6 @@
 				79C6E1731438EB9800920C64 /* swypDraftIcon72.png */,
 				79C6E1711438EB7100920C64 /* swypDraftIcon114.png */,
 				79C6E16F1438EB6200920C64 /* swypDraftIcon57.png */,
-				792D5C2D14167BC10050DF57 /* swypPhotosStylizedIconHuge.png */,
-				792D5BE414153EBA0050DF57 /* swypPhotosIconHuge.png */,
 				79C50A81148DBC89000FDCA1 /* swypPhotosHud.png */,
 				79C50A82148DBC89000FDCA1 /* swypPhotosHud@2x.png */,
 			);
@@ -309,16 +307,18 @@
 		797D6FFE143D04340086D446 /* swypBundleResources */ = {
 			isa = PBXGroup;
 			children = (
-				79C50A68148C1C87000FDCA1 /* swypTiledContentNextPageImage.png */,
-				79C50A69148C1C87000FDCA1 /* swypTiledContentPreviousPageImage.png */,
-				79BE439C147B1C81004E8903 /* bluetooth-logo-disabled.png */,
-				79BE439D147B1C81004E8903 /* bluetooth-logo-disabled@2x.png */,
+				796B8E0B14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png */,
+				796B8E0C14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png */,
+				796B8E0D14BE8F0E004FEBE3 /* connectivity-bluetooth-enabled.png */,
+				796B8E0E14BE8F0E004FEBE3 /* connectivity-bluetooth-enabled@2x.png */,
+				796B8E0F14BE8F0E004FEBE3 /* connectivity-world-disabled.png */,
+				796B8E1014BE8F0E004FEBE3 /* connectivity-world-disabled@2x.png */,
+				796B8E1114BE8F0E004FEBE3 /* connectivity-world-enabled.png */,
+				796B8E1214BE8F0E004FEBE3 /* connectivity-world-enabled@2x.png */,
 				79BE439E147B1C81004E8903 /* bluetooth-logo-enabled.png */,
 				79BE439F147B1C81004E8903 /* bluetooth-logo-enabled@2x.png */,
-				79BE43AC147B2AF8004E8903 /* wifi-logo-disabled.png */,
-				79BE43A1147B1C81004E8903 /* wifi-logo-disabled@2x.png */,
-				79BE43A2147B1C81004E8903 /* wifi-logo-enabled.png */,
-				79BE43A3147B1C81004E8903 /* wifi-logo-enabled@2x.png */,
+				79CA145D14BA5E6700253F0C /* cloud-logo-enabled.png */,
+				79CA145E14BA5E6700253F0C /* cloud-logo-enabled@2x.png */,
 				797D6FFF143D04340086D446 /* swypIPhonePromptHud.png */,
 			);
 			name = swypBundleResources;
@@ -408,30 +408,30 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */,
 				2860E38B111B897F00E27156 /* MainWindow_iPhone.xib in Resources */,
-				792D5BE514153EBA0050DF57 /* swypPhotosIconHuge.png in Resources */,
-				792D5C2E14167BC10050DF57 /* swypPhotosStylizedIconHuge.png in Resources */,
 				79C6E1701438EB6200920C64 /* swypDraftIcon57.png in Resources */,
 				79C6E1721438EB7100920C64 /* swypDraftIcon114.png in Resources */,
 				79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */,
 				797D7000143D04340086D446 /* swypIPhonePromptHud.png in Resources */,
-				79BE43A4147B1C81004E8903 /* bluetooth-logo-disabled.png in Resources */,
-				79BE43A5147B1C81004E8903 /* bluetooth-logo-disabled@2x.png in Resources */,
 				79BE43A6147B1C81004E8903 /* bluetooth-logo-enabled.png in Resources */,
 				79BE43A7147B1C81004E8903 /* bluetooth-logo-enabled@2x.png in Resources */,
-				79BE43A9147B1C81004E8903 /* wifi-logo-disabled@2x.png in Resources */,
-				79BE43AA147B1C81004E8903 /* wifi-logo-enabled.png in Resources */,
-				79BE43AB147B1C81004E8903 /* wifi-logo-enabled@2x.png in Resources */,
-				79BE43AD147B2AF8004E8903 /* wifi-logo-disabled.png in Resources */,
 				7951A251148B07DB003548AC /* ELCAlbumPickerController.xib in Resources */,
 				7951A254148B07DB003548AC /* ELCAssetPicker.xib in Resources */,
 				7951A256148B07DB003548AC /* ELCAssetTablePicker.xib in Resources */,
 				7951A258148B07DB003548AC /* ELCImagePickerController.xib in Resources */,
 				7951A25B148B07DB003548AC /* Overlay.png in Resources */,
 				7951A25C148B07DB003548AC /* Overlay@2x.png in Resources */,
-				79C50A6A148C1C87000FDCA1 /* swypTiledContentNextPageImage.png in Resources */,
-				79C50A6B148C1C87000FDCA1 /* swypTiledContentPreviousPageImage.png in Resources */,
 				79C50A83148DBC89000FDCA1 /* swypPhotosHud.png in Resources */,
 				79C50A84148DBC89000FDCA1 /* swypPhotosHud@2x.png in Resources */,
+				79CA146114BA5E6700253F0C /* cloud-logo-enabled.png in Resources */,
+				79CA146214BA5E6700253F0C /* cloud-logo-enabled@2x.png in Resources */,
+				796B8E1314BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png in Resources */,
+				796B8E1414BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png in Resources */,
+				796B8E1514BE8F0E004FEBE3 /* connectivity-bluetooth-enabled.png in Resources */,
+				796B8E1614BE8F0E004FEBE3 /* connectivity-bluetooth-enabled@2x.png in Resources */,
+				796B8E1714BE8F0E004FEBE3 /* connectivity-world-disabled.png in Resources */,
+				796B8E1814BE8F0E004FEBE3 /* connectivity-world-disabled@2x.png in Resources */,
+				796B8E1914BE8F0E004FEBE3 /* connectivity-world-enabled.png in Resources */,
+				796B8E1A14BE8F0E004FEBE3 /* connectivity-world-enabled@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
