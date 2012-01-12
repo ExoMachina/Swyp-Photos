@@ -40,7 +40,7 @@
 		
 		//we create our favorite content display controller
 		//we'll be adding data later see (elcImagePickerController:didFinishPickingMediaWithInfo:)
-		swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] initWithPhotoSize:CGSizeMake(200, 200)];
+		swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] initWithPhotoSize:CGSizeMake(140, 200)];
 
 		[[[self swypWorkspace] contentManager] setContentDisplayController:contentDisplayController];
 		SRELS(contentDisplayController);
@@ -134,8 +134,7 @@
 	[photoDatasource removeAllPhotos];
 	for(NSDictionary *dict in info) {
 		UIImage *image =	[dict objectForKey:UIImagePickerControllerOriginalImage];
-#warning: this image is so small
-		[photoDatasource addUIImage:[self constrainImage:image toSize:CGSizeMake(220, 350)] atIndex:0];
+		[photoDatasource addUIImage:[self constrainImage:image toSize:CGSizeMake(1000, 1000)] atIndex:0];
 	}
 	
 }

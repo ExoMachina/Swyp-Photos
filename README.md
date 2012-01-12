@@ -2,7 +2,7 @@ Swÿp
 ===========
 
 
-Swyp is a framework, this is an example app that incorporates this framework. The most recent branch of this framework is located at github.com/swyp/swyp-photos . 
+Swyp is a framework, this is an example app that incorporates this framework. The most recent branch of this framework is located at github.com/swyp/swypPhotos . 
 
 You'll probably want a quickstart guide; one is here:
 https://github.com/swyp/swyp -- the framework's home
