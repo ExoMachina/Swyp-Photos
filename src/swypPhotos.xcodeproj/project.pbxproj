@@ -18,6 +18,12 @@
 		28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */; };
 		28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEBFDC1118E19E00187D67 /* CoreData.framework */; };
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
+		3E0E97B314C241350066F78E /* ELCAssetTablePicker~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E0E97B214C241350066F78E /* ELCAssetTablePicker~ipad.xib */; };
+		3E0E97B614C243220066F78E /* UIDevice+iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0E97B514C243220066F78E /* UIDevice+iPad.m */; };
+		3E551DB014C2286600DF8283 /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E551DAF14C2286500DF8283 /* ELCAssetPicker.xib */; };
+		3E551DB214C229E600DF8283 /* ELCAlbumPickerController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E551DB114C229E600DF8283 /* ELCAlbumPickerController~ipad.xib */; };
+		3E551DB414C229F200DF8283 /* ELCAssetPicker~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E551DB314C229F100DF8283 /* ELCAssetPicker~ipad.xib */; };
+		3E551DB614C22A0000DF8283 /* ELCImagePickerController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E551DB514C229FF00DF8283 /* ELCImagePickerController~ipad.xib */; };
 		3E9A39F414BF4C7D00D79ECA /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E9A39F014BF4C7D00D79ECA /* down_arrow.png */; };
 		3E9A39F514BF4C7D00D79ECA /* down_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E9A39F114BF4C7D00D79ECA /* down_arrow@2x.png */; };
 		3E9A39F614BF4C7D00D79ECA /* top_curl.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E9A39F214BF4C7D00D79ECA /* top_curl.png */; };
@@ -26,7 +32,6 @@
 		7951A251148B07DB003548AC /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7951A23E148B07DB003548AC /* ELCAlbumPickerController.xib */; };
 		7951A252148B07DB003548AC /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A240148B07DB003548AC /* ELCAsset.m */; };
 		7951A253148B07DB003548AC /* ELCAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A242148B07DB003548AC /* ELCAssetCell.m */; };
-		7951A254148B07DB003548AC /* ELCAssetPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7951A243148B07DB003548AC /* ELCAssetPicker.xib */; };
 		7951A255148B07DB003548AC /* ELCAssetTablePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A245148B07DB003548AC /* ELCAssetTablePicker.m */; };
 		7951A256148B07DB003548AC /* ELCAssetTablePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7951A246148B07DB003548AC /* ELCAssetTablePicker.xib */; };
 		7951A257148B07DB003548AC /* ELCImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A248148B07DB003548AC /* ELCImagePickerController.m */; };
@@ -99,6 +104,13 @@
 		28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate_Shared.m; path = Shared/AppDelegate_Shared.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* swypPhotos_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swypPhotos_Prefix.pch; sourceTree = "<group>"; };
+		3E0E97B214C241350066F78E /* ELCAssetTablePicker~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ELCAssetTablePicker~ipad.xib"; sourceTree = "<group>"; };
+		3E0E97B414C243220066F78E /* UIDevice+iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "UIDevice+iPad.h"; sourceTree = "<group>"; };
+		3E0E97B514C243220066F78E /* UIDevice+iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+iPad.m"; sourceTree = "<group>"; };
+		3E551DAF14C2286500DF8283 /* ELCAssetPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetPicker.xib; sourceTree = "<group>"; };
+		3E551DB114C229E600DF8283 /* ELCAlbumPickerController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ELCAlbumPickerController~ipad.xib"; sourceTree = "<group>"; };
+		3E551DB314C229F100DF8283 /* ELCAssetPicker~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "ELCAssetPicker~ipad.xib"; sourceTree = "<group>"; };
+		3E551DB514C229FF00DF8283 /* ELCImagePickerController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "ELCImagePickerController~ipad.xib"; path = "../ELCImagePickerController~ipad.xib"; sourceTree = "<group>"; };
 		3E9A39F014BF4C7D00D79ECA /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_arrow.png; sourceTree = "<group>"; };
 		3E9A39F114BF4C7D00D79ECA /* down_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down_arrow@2x.png"; sourceTree = "<group>"; };
 		3E9A39F214BF4C7D00D79ECA /* top_curl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_curl.png; sourceTree = "<group>"; };
@@ -111,7 +123,6 @@
 		7951A240148B07DB003548AC /* ELCAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAsset.m; sourceTree = "<group>"; };
 		7951A241148B07DB003548AC /* ELCAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetCell.h; sourceTree = "<group>"; };
 		7951A242148B07DB003548AC /* ELCAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetCell.m; sourceTree = "<group>"; };
-		7951A243148B07DB003548AC /* ELCAssetPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetPicker.xib; sourceTree = "<group>"; };
 		7951A244148B07DB003548AC /* ELCAssetTablePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAssetTablePicker.h; sourceTree = "<group>"; };
 		7951A245148B07DB003548AC /* ELCAssetTablePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAssetTablePicker.m; sourceTree = "<group>"; };
 		7951A246148B07DB003548AC /* ELCAssetTablePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAssetTablePicker.xib; sourceTree = "<group>"; };
@@ -288,17 +299,23 @@
 				7951A23C148B07DB003548AC /* ELCAlbumPickerController.h */,
 				7951A23D148B07DB003548AC /* ELCAlbumPickerController.m */,
 				7951A23E148B07DB003548AC /* ELCAlbumPickerController.xib */,
+				3E551DB114C229E600DF8283 /* ELCAlbumPickerController~ipad.xib */,
 				7951A23F148B07DB003548AC /* ELCAsset.h */,
 				7951A240148B07DB003548AC /* ELCAsset.m */,
 				7951A241148B07DB003548AC /* ELCAssetCell.h */,
 				7951A242148B07DB003548AC /* ELCAssetCell.m */,
-				7951A243148B07DB003548AC /* ELCAssetPicker.xib */,
+				3E551DAF14C2286500DF8283 /* ELCAssetPicker.xib */,
+				3E551DB314C229F100DF8283 /* ELCAssetPicker~ipad.xib */,
 				7951A244148B07DB003548AC /* ELCAssetTablePicker.h */,
 				7951A245148B07DB003548AC /* ELCAssetTablePicker.m */,
+				3E0E97B414C243220066F78E /* UIDevice+iPad.h */,
+				3E0E97B514C243220066F78E /* UIDevice+iPad.m */,
 				7951A246148B07DB003548AC /* ELCAssetTablePicker.xib */,
+				3E0E97B214C241350066F78E /* ELCAssetTablePicker~ipad.xib */,
 				7951A247148B07DB003548AC /* ELCImagePickerController.h */,
 				7951A248148B07DB003548AC /* ELCImagePickerController.m */,
 				7951A249148B07DB003548AC /* ELCImagePickerController.xib */,
+				3E551DB514C229FF00DF8283 /* ELCImagePickerController~ipad.xib */,
 				7951A24A148B07DB003548AC /* ELCImagePickerDemoAppDelegate.h */,
 				7951A24B148B07DB003548AC /* ELCImagePickerDemoAppDelegate.m */,
 				7951A24C148B07DB003548AC /* ELCImagePickerDemoViewController.h */,
@@ -427,7 +444,6 @@
 				79BE43A6147B1C81004E8903 /* bluetooth-logo-enabled.png in Resources */,
 				79BE43A7147B1C81004E8903 /* bluetooth-logo-enabled@2x.png in Resources */,
 				7951A251148B07DB003548AC /* ELCAlbumPickerController.xib in Resources */,
-				7951A254148B07DB003548AC /* ELCAssetPicker.xib in Resources */,
 				7951A256148B07DB003548AC /* ELCAssetTablePicker.xib in Resources */,
 				7951A258148B07DB003548AC /* ELCImagePickerController.xib in Resources */,
 				7951A25B148B07DB003548AC /* Overlay.png in Resources */,
@@ -448,6 +464,11 @@
 				3E9A39F514BF4C7D00D79ECA /* down_arrow@2x.png in Resources */,
 				3E9A39F614BF4C7D00D79ECA /* top_curl.png in Resources */,
 				3E9A39F714BF4C7D00D79ECA /* top_curl@2x.png in Resources */,
+				3E551DB014C2286600DF8283 /* ELCAssetPicker.xib in Resources */,
+				3E551DB214C229E600DF8283 /* ELCAlbumPickerController~ipad.xib in Resources */,
+				3E551DB414C229F200DF8283 /* ELCAssetPicker~ipad.xib in Resources */,
+				3E551DB614C22A0000DF8283 /* ELCImagePickerController~ipad.xib in Resources */,
+				3E0E97B314C241350066F78E /* ELCAssetTablePicker~ipad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +494,7 @@
 				7951A25A148B07DB003548AC /* ELCImagePickerDemoViewController.m in Sources */,
 				79C50A63148B0AD2000FDCA1 /* grabPhotosViewController.m in Sources */,
 				79C50A6E148C2362000FDCA1 /* cameraEnabledAlbumPickerController.m in Sources */,
+				3E0E97B614C243220066F78E /* UIDevice+iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
