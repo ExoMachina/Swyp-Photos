@@ -18,6 +18,11 @@
 		28AD733F0D9D9553002E5188 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow_iPad.xib */; };
 		28EEBFDD1118E19E00187D67 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EEBFDC1118E19E00187D67 /* CoreData.framework */; };
 		28EEC04B1118E28000187D67 /* AppDelegate_Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */; };
+		7901263F14C37242005F423B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7901263D14C3723A005F423B /* GameKit.framework */; };
+		7901264414C3727D005F423B /* down_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7901264014C3727D005F423B /* down_arrow.png */; };
+		7901264514C3727D005F423B /* down_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7901264114C3727D005F423B /* down_arrow@2x.png */; };
+		7901264614C3727D005F423B /* top_curl.png in Resources */ = {isa = PBXBuildFile; fileRef = 7901264214C3727D005F423B /* top_curl.png */; };
+		7901264714C3727D005F423B /* top_curl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7901264314C3727D005F423B /* top_curl@2x.png */; };
 		7951A250148B07DB003548AC /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A23D148B07DB003548AC /* ELCAlbumPickerController.m */; };
 		7951A251148B07DB003548AC /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7951A23E148B07DB003548AC /* ELCAlbumPickerController.xib */; };
 		7951A252148B07DB003548AC /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A240148B07DB003548AC /* ELCAsset.m */; };
@@ -33,7 +38,6 @@
 		7951A25C148B07DB003548AC /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7951A24F148B07DB003548AC /* Overlay@2x.png */; };
 		7951A260148B08C4003548AC /* libswyp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7951A234148B06DF003548AC /* libswyp.a */; };
 		79635AD414904F820098C265 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79635AD314904F820098C265 /* SystemConfiguration.framework */; };
-		79635AD614905D8B0098C265 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79635AD514905D8B0098C265 /* CoreBluetooth.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		796B8E1314BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E0B14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png */; };
 		796B8E1414BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E0C14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png */; };
 		796B8E1514BE8F0E004FEBE3 /* connectivity-bluetooth-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E0D14BE8F0E004FEBE3 /* connectivity-bluetooth-enabled.png */; };
@@ -95,6 +99,11 @@
 		28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate_Shared.m; path = Shared/AppDelegate_Shared.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Shared/main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* swypPhotos_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swypPhotos_Prefix.pch; sourceTree = "<group>"; };
+		7901263D14C3723A005F423B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		7901264014C3727D005F423B /* down_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_arrow.png; sourceTree = "<group>"; };
+		7901264114C3727D005F423B /* down_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down_arrow@2x.png"; sourceTree = "<group>"; };
+		7901264214C3727D005F423B /* top_curl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_curl.png; sourceTree = "<group>"; };
+		7901264314C3727D005F423B /* top_curl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_curl@2x.png"; sourceTree = "<group>"; };
 		790A5FB414776CBF00E080EE /* swyp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = swyp.xcodeproj; path = ../lib/swyp/libSwyp/swyp.xcodeproj; sourceTree = "<group>"; };
 		7951A23C148B07DB003548AC /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
 		7951A23D148B07DB003548AC /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
@@ -117,7 +126,6 @@
 		7951A24E148B07DB003548AC /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
 		7951A24F148B07DB003548AC /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
 		79635AD314904F820098C265 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		79635AD514905D8B0098C265 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		796B8E0B14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-disabled.png"; sourceTree = "<group>"; };
 		796B8E0C14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-disabled@2x.png"; sourceTree = "<group>"; };
 		796B8E0D14BE8F0E004FEBE3 /* connectivity-bluetooth-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-enabled.png"; sourceTree = "<group>"; };
@@ -154,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7901263F14C37242005F423B /* GameKit.framework in Frameworks */,
 				79C50A60148B09FE000FDCA1 /* AssetsLibrary.framework in Frameworks */,
 				7951A260148B08C4003548AC /* libswyp.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -164,7 +173,6 @@
 				79BDC494145A0B9E009C3541 /* Security.framework in Frameworks */,
 				79BDC496145A0C2E009C3541 /* CFNetwork.framework in Frameworks */,
 				79635AD414904F820098C265 /* SystemConfiguration.framework in Frameworks */,
-				79635AD614905D8B0098C265 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +247,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				79635AD514905D8B0098C265 /* CoreBluetooth.framework */,
+				7901263D14C3723A005F423B /* GameKit.framework */,
 				79635AD314904F820098C265 /* SystemConfiguration.framework */,
 				79C50A5F148B09FE000FDCA1 /* AssetsLibrary.framework */,
 				79BDC495145A0C2E009C3541 /* CFNetwork.framework */,
@@ -307,6 +315,10 @@
 		797D6FFE143D04340086D446 /* swypBundleResources */ = {
 			isa = PBXGroup;
 			children = (
+				7901264014C3727D005F423B /* down_arrow.png */,
+				7901264114C3727D005F423B /* down_arrow@2x.png */,
+				7901264214C3727D005F423B /* top_curl.png */,
+				7901264314C3727D005F423B /* top_curl@2x.png */,
 				796B8E0B14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png */,
 				796B8E0C14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png */,
 				796B8E0D14BE8F0E004FEBE3 /* connectivity-bluetooth-enabled.png */,
@@ -432,6 +444,10 @@
 				796B8E1814BE8F0E004FEBE3 /* connectivity-world-disabled@2x.png in Resources */,
 				796B8E1914BE8F0E004FEBE3 /* connectivity-world-enabled.png in Resources */,
 				796B8E1A14BE8F0E004FEBE3 /* connectivity-world-enabled@2x.png in Resources */,
+				7901264414C3727D005F423B /* down_arrow.png in Resources */,
+				7901264514C3727D005F423B /* down_arrow@2x.png in Resources */,
+				7901264614C3727D005F423B /* top_curl.png in Resources */,
+				7901264714C3727D005F423B /* top_curl@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +499,7 @@
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = swypPhotos;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "557B0F8E-F52E-41AF-972A-7A155C7B6CE4";
@@ -499,7 +515,7 @@
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = swypPhotos;
 				VALIDATE_PRODUCT = YES;
@@ -534,7 +550,7 @@
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = swypPhotos;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "185C22AE-8C21-4746-9F19-7F72E07CD520";
