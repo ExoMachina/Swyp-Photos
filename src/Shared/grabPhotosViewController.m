@@ -10,6 +10,38 @@
 #import "cameraEnabledAlbumPickerController.h"
 #import "ELCAssetTablePicker.h"
 
+// To deal with rotation madness
+@interface UIApplication (AppDimensions)
++(CGSize) currentSize;
++(CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation;
+@end
+
+@implementation UIApplication (AppDimensions)
+
++(CGSize) currentSize
+{
+    return [UIApplication sizeInOrientation:[UIApplication sharedApplication].statusBarOrientation];
+}
+
++(CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation
+{
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    UIApplication *application = [UIApplication sharedApplication];
+    if (UIInterfaceOrientationIsLandscape(orientation))
+    {
+        size = CGSizeMake(size.height, size.width);
+    }
+    if (application.statusBarHidden == NO)
+    {
+        size.height -= MIN(application.statusBarFrame.size.width, application.statusBarFrame.size.height);
+    }
+    return size;
+}
+
+@end
+
+// The main show
+
 @implementation grabPhotosViewController
 @synthesize swypWorkspace = _swypWorkspace;
 
@@ -58,6 +90,16 @@
 	[self presentModalViewController:[self swypWorkspace] animated:TRUE];
 }
 
+-(void)frameActivateButtonWithSize:(CGSize)theSize {
+    NSLog(@"%f", [UIApplication currentSize].height);
+    [_activateSwypButton setFrame:CGRectMake((([UIApplication currentSize].width)-theSize.width)/2, [UIApplication currentSize].height-theSize.height, theSize.width, theSize.height)];
+}
+
+-(void)reframeActivateButton {
+    [self frameActivateButtonWithSize:_activateSwypButton.size];
+    NSLog(@"{x,y} = {%f, %f}", _activateSwypButton.frame.origin.x, _activateSwypButton.frame.origin.y);
+}
+
 #pragma mark - View lifecycle
 - (void)didReceiveMemoryWarning
 {
@@ -77,24 +119,40 @@
 	[self addChildViewController:_imagePicker];
 	SRELS(albumController);
 	
-	UIButton *	activateSwypButton	=	[UIButton buttonWithType:UIButtonTypeCustom];
+	_activateSwypButton	=	[UIButton buttonWithType:UIButtonTypeCustom];
 	UIImage *	swypActivateImage	=	[UIImage imageNamed:@"swypPhotosHud"];
-	[activateSwypButton setBackgroundImage:swypActivateImage forState:UIControlStateNormal];
-	[activateSwypButton setFrame:CGRectMake((self.view.size.width-[swypActivateImage size].width)/2, self.view.size.height-[swypActivateImage size].height, [swypActivateImage size].width, [swypActivateImage size].height)];
-	[activateSwypButton addTarget:self action:@selector(activateSwypButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-	[self.view addSubview:activateSwypButton];
+	[_activateSwypButton setBackgroundImage:swypActivateImage forState:UIControlStateNormal];
+	[self frameActivateButtonWithSize:swypActivateImage.size];
+	[_activateSwypButton addTarget:self action:@selector(activateSwypButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UISwipeGestureRecognizer *swipeUpRecognizer = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(activateSwypButtonPressed:)] autorelease];
+    swipeUpRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+    
+    [_activateSwypButton addGestureRecognizer:swipeUpRecognizer];
+    
+	[self.view addSubview:_activateSwypButton];
 }
 
 - (void)viewDidUnload{
     [super viewDidUnload];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
-
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return YES;
 }
 
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    _activateSwypButton.alpha = 0;
+}
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self reframeActivateButton];
+    _activateSwypButton.alpha = 1;
+}
+
 #pragma mark - Image resizing for high-speed
+
+// This should be done using GCD.
 -(UIImage*)	constrainImage:(UIImage*)image toSize:(CGSize)maxSize{
 	if (image == nil)
 		return nil;
