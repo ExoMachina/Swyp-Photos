@@ -107,6 +107,9 @@
 }
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackTranslucent];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
 	
 	cameraEnabledAlbumPickerController *albumController = [[cameraEnabledAlbumPickerController alloc] initWithNibName:@"ELCAlbumPickerController" bundle:[NSBundle mainBundle]];    
 	_imagePicker = [[ELCImagePickerController alloc] initWithRootViewController:albumController];
