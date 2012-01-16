@@ -59,10 +59,6 @@
 		[_swypWorkspace.view setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
 		[_swypWorkspace.view setFrame:self.view.bounds];
 		
-		//this just makes it so your photos appear in background before you swyp to another device
-		//otherwise you'll be swyping to create a connection, then swyping the image
-		[_swypWorkspace setShowContentWithoutConnection:TRUE];
-
 		//this data source will link to the contentdisplayview controller through the content manager
 		//We're set as a delegate so we can can save photos we receive in a very simple way,
 		//but see the protocols that swypPhotoArrayDatasource conforms to if you want to create custom data sources; EG, for core data
@@ -108,7 +104,6 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlackTranslucent];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
 	
 	cameraEnabledAlbumPickerController *albumController = [[cameraEnabledAlbumPickerController alloc] initWithNibName:@"ELCAlbumPickerController" bundle:[NSBundle mainBundle]];    
