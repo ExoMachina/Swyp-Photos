@@ -16,6 +16,8 @@
 	ELCImagePickerController *		_imagePicker;
 	
 	swypWorkspaceViewController *	_swypWorkspace;
+    
+    UIButton                    *   _activateSwypButton;
 }
 @property (nonatomic, readonly) swypWorkspaceViewController * swypWorkspace;
 
