@@ -86,7 +86,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate_iPad.h; path = iPad/AppDelegate_iPad.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate_iPad.m; path = iPad/AppDelegate_iPad.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* swypPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swypPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* swyp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swyp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2860E387111B897F00E27156 /* AppDelegate_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate_iPhone.h; sourceTree = "<group>"; };
 		2860E388111B897F00E27156 /* AppDelegate_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate_iPhone.m; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		79C6E1731438EB9800920C64 /* swypDraftIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypDraftIcon72.png; path = ../resource/swypDraftIcon72.png; sourceTree = "<group>"; };
 		79CA145D14BA5E6700253F0C /* cloud-logo-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-logo-enabled.png"; sourceTree = "<group>"; };
 		79CA145E14BA5E6700253F0C /* cloud-logo-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-logo-enabled@2x.png"; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* swypPhotos-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "swypPhotos-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* swyp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "swyp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +181,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* swypPhotos.app */,
+				1D6058910D05DD3D006BFB54 /* swyp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 				2819307C112F81BE00ECF9B4 /* swypPhotos.xcdatamodeld */,
 				28EEC0491118E28000187D67 /* AppDelegate_Shared.h */,
 				28EEC04A1118E28000187D67 /* AppDelegate_Shared.m */,
-				8D1107310486CEB800E47090 /* swypPhotos-Info.plist */,
+				8D1107310486CEB800E47090 /* swyp-Info.plist */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -350,9 +350,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* swypPhotos */ = {
+		1D6058900D05DD3D006BFB54 /* swyp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "swypPhotos" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "swyp" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -363,9 +363,9 @@
 			dependencies = (
 				7951A25E148B0821003548AC /* PBXTargetDependency */,
 			);
-			name = swypPhotos;
+			name = swyp;
 			productName = swypPhotos;
-			productReference = 1D6058910D05DD3D006BFB54 /* swypPhotos.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* swyp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -376,7 +376,7 @@
 			attributes = {
 				LastUpgradeCheck = 0410;
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "swypPhotos" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "swyp" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -396,7 +396,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* swypPhotos */,
+				1D6058900D05DD3D006BFB54 /* swyp */,
 			);
 		};
 /* End PBXProject section */
@@ -496,10 +496,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
-				INFOPLIST_FILE = "swypPhotos-Info.plist";
+				INFOPLIST_FILE = "swyp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = swypPhotos;
+				PRODUCT_NAME = swyp;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 			};
 			name = Debug;
@@ -508,14 +508,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
-				INFOPLIST_FILE = "swypPhotos-Info.plist";
+				INFOPLIST_FILE = "swyp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = swypPhotos;
+				PRODUCT_NAME = swyp;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -547,10 +549,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
-				INFOPLIST_FILE = "swypPhotos-Info.plist";
+				INFOPLIST_FILE = "swyp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_NAME = swypPhotos;
+				PRODUCT_NAME = swyp;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -595,7 +597,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "swypPhotos" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "swyp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -605,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "swypPhotos" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "swyp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

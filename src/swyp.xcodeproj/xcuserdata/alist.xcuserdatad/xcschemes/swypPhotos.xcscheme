@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
                BuildableName = "swypPhotos.app"
-               BlueprintName = "swypPhotos"
-               ReferencedContainer = "container:swypPhotos.xcodeproj">
+               BlueprintName = "swyp"
+               ReferencedContainer = "container:swyp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,8 +33,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "swypPhotos.app"
-            BlueprintName = "swypPhotos"
-            ReferencedContainer = "container:swypPhotos.xcodeproj">
+            BlueprintName = "swyp"
+            ReferencedContainer = "container:swyp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,8 +51,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "swypPhotos.app"
-            BlueprintName = "swypPhotos"
-            ReferencedContainer = "container:swypPhotos.xcodeproj">
+            BlueprintName = "swyp"
+            ReferencedContainer = "container:swyp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,8 +69,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "swypPhotos.app"
-            BlueprintName = "swypPhotos"
-            ReferencedContainer = "container:swypPhotos.xcodeproj">
+            BlueprintName = "swyp"
+            ReferencedContainer = "container:swyp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -78,7 +78,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "AdHoc"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

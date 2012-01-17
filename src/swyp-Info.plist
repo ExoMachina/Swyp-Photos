@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>Swÿp</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
@@ -15,7 +15,7 @@
 		<string>swypDraftIcon72.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.exomachina.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.exomachina.swyp</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
