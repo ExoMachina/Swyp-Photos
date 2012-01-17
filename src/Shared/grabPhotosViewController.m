@@ -81,10 +81,7 @@
 -(void) activateSwypButtonPressed:(id)sender{
 	[self presentModalViewController:[self swypWorkspace] animated:TRUE];
 
-//	if ([[_imagePicker topViewController] isKindOfClass:[ELCAssetTablePicker class]]){
-//		[(ELCAssetTablePicker*)[_imagePicker topViewController] doneAction:self];
-//	}
-	
+	//here is one way to avoid blocking the main thread when loading images
 	[[NSOperationQueue mainQueue] addOperationWithBlock:^{
 		if ([[_imagePicker topViewController] isKindOfClass:[ELCAssetTablePicker class]]){
 			[(ELCAssetTablePicker*)[_imagePicker topViewController] performSelectorOnMainThread:@selector(doneAction:) withObject:self waitUntilDone:YES];
@@ -200,6 +197,7 @@
 	for(NSDictionary *dict in info) {
 		UIImage *image =	[dict objectForKey:UIImagePickerControllerOriginalImage];
 
+		//here is one way to avoid blocking the main thread when loading images
 		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
 			[photoDatasource addUIImage:[self constrainImage:image toSize:CGSizeMake(1000, 1000)] atIndex:0];
 		}];
