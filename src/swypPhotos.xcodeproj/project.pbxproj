@@ -489,7 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alexander List (76TLAY9W6F)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -497,10 +497,10 @@
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = swypPhotos;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "557B0F8E-F52E-41AF-972A-7A155C7B6CE4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 			};
 			name = Debug;
 		};
@@ -513,7 +513,7 @@
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = swypPhotos;
 				VALIDATE_PRODUCT = YES;
@@ -542,16 +542,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ExoMachina";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = swypPhotos;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "185C22AE-8C21-4746-9F19-7F72E07CD520";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = AdHoc;
