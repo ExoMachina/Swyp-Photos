@@ -53,7 +53,7 @@
     return self;
 }
 
--(swypWorkspaceViewController*)swypWorkspace{
+-(swypWorkspaceViewController *)swypWorkspace{
 	if (_swypWorkspace == nil){
 		_swypWorkspace	=	[[swypWorkspaceViewController alloc] initWithWorkspaceDelegate:self];
 		[_swypWorkspace.view setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
@@ -75,6 +75,7 @@
 		[[[self swypWorkspace] contentManager] setContentDisplayController:contentDisplayController];
 		SRELS(contentDisplayController);
 	}
+    
 	return _swypWorkspace;
 }
 
@@ -103,9 +104,7 @@
 }
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
-	
+    	
 	cameraEnabledAlbumPickerController *albumController = [[cameraEnabledAlbumPickerController alloc] initWithNibName:@"ELCAlbumPickerController" bundle:[NSBundle mainBundle]];    
 	_imagePicker = [[ELCImagePickerController alloc] initWithRootViewController:albumController];
     [albumController setParent:_imagePicker];
@@ -129,6 +128,12 @@
     [_activateSwypButton addGestureRecognizer:swipeUpRecognizer];
     
 	[self.view addSubview:_activateSwypButton];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self reframeActivateButton];
 }
 
 - (void)viewDidUnload{
@@ -190,7 +195,8 @@
 	swypBackedPhotoDataSource *	photoDatasource	= (swypBackedPhotoDataSource*) [[[self swypWorkspace] contentManager] contentDataSource];
 	
 	[photoDatasource removeAllPhotos];
-	for(NSDictionary *dict in info) {
+    
+	for (NSDictionary *dict in info) {
 		UIImage *image =	[dict objectForKey:UIImagePickerControllerOriginalImage];
 		[photoDatasource addUIImage:[self constrainImage:image toSize:CGSizeMake(1000, 1000)] atIndex:0];
 	}
@@ -204,7 +210,7 @@
 	[self dismissModalViewControllerAnimated:TRUE];
 }
 
--(void) swypBackedPhotoDataSourceRecievedPhoto: (UIImage*) photo withDataSource: (swypBackedPhotoDataSource*)dataSource{
+-(void) swypBackedPhotoDataSourceRecievedPhoto: (UIImage*) photo withDataSource: (swypBackedPhotoDataSource*)dataSource {
 	UIImageWriteToSavedPhotosAlbum(photo, nil, nil, nil);
 	
 	UIView * flashView	= [[UIView alloc] initWithFrame:[self swypWorkspace].view.frame];
