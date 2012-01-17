@@ -159,6 +159,8 @@
 	if (image == nil)
 		return nil;
 	
+#pragma mark TODO: replace this with threadable code
+	//CGBitmap will help us out in the future
 	CGSize oversize = CGSizeMake([image size].width - maxSize.width, [image size].height - maxSize.height);
 	
 	CGSize iconSize			=	CGSizeZero;
