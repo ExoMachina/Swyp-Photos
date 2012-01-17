@@ -497,7 +497,7 @@
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = swypPhotos;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -513,7 +513,7 @@
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = swypPhotos;
 				VALIDATE_PRODUCT = YES;
@@ -548,7 +548,7 @@
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swypPhotos-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = swypPhotos;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
