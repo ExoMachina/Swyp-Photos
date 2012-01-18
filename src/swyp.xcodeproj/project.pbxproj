@@ -36,7 +36,6 @@
 		7951A258148B07DB003548AC /* ELCImagePickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7951A249148B07DB003548AC /* ELCImagePickerController.xib */; };
 		7951A25B148B07DB003548AC /* Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 7951A24E148B07DB003548AC /* Overlay.png */; };
 		7951A25C148B07DB003548AC /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7951A24F148B07DB003548AC /* Overlay@2x.png */; };
-		7951A260148B08C4003548AC /* libswyp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7951A234148B06DF003548AC /* libswyp.a */; };
 		79635AD414904F820098C265 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79635AD314904F820098C265 /* SystemConfiguration.framework */; };
 		796B8E1314BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E0B14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png */; };
 		796B8E1414BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 796B8E0C14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png */; };
@@ -63,22 +62,23 @@
 		79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1731438EB9800920C64 /* swypDraftIcon72.png */; };
 		79CA146114BA5E6700253F0C /* cloud-logo-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CA145D14BA5E6700253F0C /* cloud-logo-enabled.png */; };
 		79CA146214BA5E6700253F0C /* cloud-logo-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CA145E14BA5E6700253F0C /* cloud-logo-enabled@2x.png */; };
+		79FD02D514C77D5A00BD4382 /* liblibSwyp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FD02D114C77D4900BD4382 /* liblibSwyp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7951A233148B06DF003548AC /* PBXContainerItemProxy */ = {
+		79FD02D014C77D4900BD4382 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 790A5FB414776CBF00E080EE /* swyp.xcodeproj */;
+			containerPortal = 790A5FB414776CBF00E080EE /* libSwyp.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = swyp;
+			remoteInfo = libSwyp;
 		};
-		7951A25D148B0821003548AC /* PBXContainerItemProxy */ = {
+		79FD02D314C77D5300BD4382 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 790A5FB414776CBF00E080EE /* swyp.xcodeproj */;
+			containerPortal = 790A5FB414776CBF00E080EE /* libSwyp.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = swyp;
+			remoteInfo = libSwyp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -106,7 +106,7 @@
 		7901264314C3727D005F423B /* top_curl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_curl@2x.png"; sourceTree = "<group>"; };
 		7901265A14C38423005F423B /* swypPromptHud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swypPromptHud.png; sourceTree = "<group>"; };
 		7901265B14C38423005F423B /* swypPromptHud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swypPromptHud@2x.png"; sourceTree = "<group>"; };
-		790A5FB414776CBF00E080EE /* swyp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = swyp.xcodeproj; path = ../lib/swyp/libSwyp/swyp.xcodeproj; sourceTree = "<group>"; };
+		790A5FB414776CBF00E080EE /* libSwyp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libSwyp.xcodeproj; path = ../lib/swyp/libSwyp/libSwyp.xcodeproj; sourceTree = "<group>"; };
 		7951A23C148B07DB003548AC /* ELCAlbumPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCAlbumPickerController.h; sourceTree = "<group>"; };
 		7951A23D148B07DB003548AC /* ELCAlbumPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCAlbumPickerController.m; sourceTree = "<group>"; };
 		7951A23E148B07DB003548AC /* ELCAlbumPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCAlbumPickerController.xib; sourceTree = "<group>"; };
@@ -124,6 +124,7 @@
 		7951A24E148B07DB003548AC /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
 		7951A24F148B07DB003548AC /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
 		79635AD314904F820098C265 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7966FFFE14C77D3D00CFF39C /* liblibSwyp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibSwyp.a; path = "../lib/swyp/libSwyp/build/Release-iphoneos/liblibSwyp.a"; sourceTree = "<group>"; };
 		796B8E0B14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-disabled.png"; sourceTree = "<group>"; };
 		796B8E0C14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-disabled@2x.png"; sourceTree = "<group>"; };
 		796B8E0D14BE8F0E004FEBE3 /* connectivity-bluetooth-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-enabled.png"; sourceTree = "<group>"; };
@@ -161,9 +162,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FD02D514C77D5A00BD4382 /* liblibSwyp.a in Frameworks */,
 				7901263F14C37242005F423B /* GameKit.framework in Frameworks */,
 				79C50A60148B09FE000FDCA1 /* AssetsLibrary.framework in Frameworks */,
-				7951A260148B08C4003548AC /* libswyp.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -212,7 +213,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				790A5FB414776CBF00E080EE /* swyp.xcodeproj */,
+				790A5FB414776CBF00E080EE /* libSwyp.xcodeproj */,
 				2860E386111B897F00E27156 /* iPhone */,
 				29B97317FDCFA39411CA2CEA /* iPad */,
 				28EEBF621118D79A00187D67 /* Shared */,
@@ -246,6 +247,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7966FFFE14C77D3D00CFF39C /* liblibSwyp.a */,
 				7901263D14C3723A005F423B /* GameKit.framework */,
 				79635AD314904F820098C265 /* SystemConfiguration.framework */,
 				79C50A5F148B09FE000FDCA1 /* AssetsLibrary.framework */,
@@ -271,14 +273,6 @@
 				79C50A82148DBC89000FDCA1 /* swypPhotosHud@2x.png */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		7951A230148B06DF003548AC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7951A234148B06DF003548AC /* libswyp.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		7951A23B148B07DB003548AC /* ELImagePickerController */ = {
@@ -347,6 +341,14 @@
 			path = iPhone;
 			sourceTree = "<group>";
 		};
+		79FD02CD14C77D4900BD4382 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79FD02D114C77D4900BD4382 /* liblibSwyp.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -361,7 +363,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				7951A25E148B0821003548AC /* PBXTargetDependency */,
+				79FD02D414C77D5300BD4382 /* PBXTargetDependency */,
 			);
 			name = swyp;
 			productName = swypPhotos;
@@ -390,8 +392,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 7951A230148B06DF003548AC /* Products */;
-					ProjectRef = 790A5FB414776CBF00E080EE /* swyp.xcodeproj */;
+					ProductGroup = 79FD02CD14C77D4900BD4382 /* Products */;
+					ProjectRef = 790A5FB414776CBF00E080EE /* libSwyp.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -402,11 +404,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		7951A234148B06DF003548AC /* libswyp.a */ = {
+		79FD02D114C77D4900BD4382 /* liblibSwyp.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libswyp.a;
-			remoteRef = 7951A233148B06DF003548AC /* PBXContainerItemProxy */;
+			path = liblibSwyp.a;
+			remoteRef = 79FD02D014C77D4900BD4382 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -477,10 +479,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7951A25E148B0821003548AC /* PBXTargetDependency */ = {
+		79FD02D414C77D5300BD4382 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = swyp;
-			targetProxy = 7951A25D148B0821003548AC /* PBXContainerItemProxy */;
+			name = libSwyp;
+			targetProxy = 79FD02D314C77D5300BD4382 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
