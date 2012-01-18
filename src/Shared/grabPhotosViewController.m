@@ -113,9 +113,7 @@
 	_imagePicker = [[ELCImagePickerController alloc] initWithRootViewController:albumController];
     [albumController setParent:_imagePicker];
 	[_imagePicker setDelegate:self];
-	
-	[_imagePicker.view setOrigin:CGPointMake(0, -20)];
-	
+		
 	[self.view addSubview:_imagePicker.view];
 	[self addChildViewController:_imagePicker];
 	SRELS(albumController);
