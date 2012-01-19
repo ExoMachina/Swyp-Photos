@@ -16,15 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     [super application:application didFinishLaunchingWithOptions:launchOptions];
-    // Override point for customization after application launch.
-    
-	grabPhotosController	=	[[grabPhotosViewController alloc] init];
-	[[grabPhotosController view] setFrame:[self.window bounds]];
-	
-	[self.window setRootViewController:grabPhotosController];
-    [self.window makeKeyAndVisible];
-    SRELS(grabPhotosController);
-	
+    // Override point for customization after application launch.	
 	
     return YES;
 }

@@ -16,7 +16,14 @@
 #pragma mark Application lifecycle
 
 -(BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    grabPhotosController	=	[[grabPhotosViewController alloc] init];
+	[[grabPhotosController view] setFrame:[self.window bounds]];
 	
+    self.window.backgroundColor = [UIColor blackColor];
+	[self.window setRootViewController:grabPhotosController];
+    [self.window makeKeyAndVisible];
+    SRELS(grabPhotosController);
+    
 	return TRUE;
 }
 
