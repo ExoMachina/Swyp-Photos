@@ -92,13 +92,11 @@
 }
 
 -(void)frameActivateButtonWithSize:(CGSize)theSize {
-    NSLog(@"%f", [UIApplication currentSize].height);
     [_activateSwypButton setFrame:CGRectMake((([UIApplication currentSize].width)-theSize.width)/2, [UIApplication currentSize].height-theSize.height, theSize.width, theSize.height)];
 }
 
 -(void)reframeActivateButton {
     [self frameActivateButtonWithSize:_activateSwypButton.size];
-    NSLog(@"{x,y} = {%f, %f}", _activateSwypButton.frame.origin.x, _activateSwypButton.frame.origin.y);
 }
 
 #pragma mark - View lifecycle

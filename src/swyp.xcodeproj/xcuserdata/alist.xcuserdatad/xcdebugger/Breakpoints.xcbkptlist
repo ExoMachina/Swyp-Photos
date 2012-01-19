@@ -32,20 +32,6 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "0"
-         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypInputToOutputStreamConnector.m"
-         timestampString = "348550076.364225"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "143"
-         endingLineNumber = "143"
-         landmarkName = "-stream:handleEvent:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
@@ -60,17 +46,17 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "0"
-         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypInputToDataBridge.m"
-         timestampString = "348550067.265553"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypConcatenatedInputStream.m"
+         timestampString = "348695110.723232"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "68"
-         endingLineNumber = "68"
-         landmarkName = "-completedInputStream:forOutputStream:withInputToOutputConnector:"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
+         landmarkName = "-hasBytesAvailable"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
