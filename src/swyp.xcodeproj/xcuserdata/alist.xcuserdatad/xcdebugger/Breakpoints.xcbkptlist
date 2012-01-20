@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypHandshakeManager.m"
-         timestampString = "348460069.674219"
+         timestampString = "348703087.962007"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "415"
-         endingLineNumber = "415"
+         startingLineNumber = "418"
+         endingLineNumber = "418"
          landmarkName = "-_postNegotiationSessionHandOff:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -57,6 +57,34 @@
          startingLineNumber = "80"
          endingLineNumber = "80"
          landmarkName = "-hasBytesAvailable"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypHandshakeManager.m"
+         timestampString = "348703978.158333"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "133"
+         endingLineNumber = "133"
+         landmarkName = "-yieldedData:discernedStream:inConnectionSession:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypBluetoothPairManager.m"
+         timestampString = "348705785.116427"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "397"
+         endingLineNumber = "397"
+         landmarkName = "-_peerIsInConnection:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
