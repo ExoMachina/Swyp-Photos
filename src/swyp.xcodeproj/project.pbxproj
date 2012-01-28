@@ -25,6 +25,7 @@
 		7901264714C3727D005F423B /* top_curl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7901264314C3727D005F423B /* top_curl@2x.png */; };
 		7901265C14C38423005F423B /* swypPromptHud.png in Resources */ = {isa = PBXBuildFile; fileRef = 7901265A14C38423005F423B /* swypPromptHud.png */; };
 		7901265D14C38423005F423B /* swypPromptHud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7901265B14C38423005F423B /* swypPromptHud@2x.png */; };
+		7902D6AB14D4A68500C71731 /* liblibSwyp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FD02D114C77D4900BD4382 /* liblibSwyp.a */; };
 		7951A250148B07DB003548AC /* ELCAlbumPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A23D148B07DB003548AC /* ELCAlbumPickerController.m */; };
 		7951A251148B07DB003548AC /* ELCAlbumPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7951A23E148B07DB003548AC /* ELCAlbumPickerController.xib */; };
 		7951A252148B07DB003548AC /* ELCAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 7951A240148B07DB003548AC /* ELCAsset.m */; };
@@ -62,22 +63,21 @@
 		79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1731438EB9800920C64 /* swypDraftIcon72.png */; };
 		79CA146114BA5E6700253F0C /* cloud-logo-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CA145D14BA5E6700253F0C /* cloud-logo-enabled.png */; };
 		79CA146214BA5E6700253F0C /* cloud-logo-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CA145E14BA5E6700253F0C /* cloud-logo-enabled@2x.png */; };
-		79FD02D514C77D5A00BD4382 /* liblibSwyp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79FD02D114C77D4900BD4382 /* liblibSwyp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7902D6AC14D4A69600C71731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 790A5FB414776CBF00E080EE /* libSwyp.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = libSwyp;
+		};
 		79FD02D014C77D4900BD4382 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 790A5FB414776CBF00E080EE /* libSwyp.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = libSwyp;
-		};
-		79FD02D314C77D5300BD4382 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 790A5FB414776CBF00E080EE /* libSwyp.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = libSwyp;
 		};
 /* End PBXContainerItemProxy section */
@@ -123,6 +123,7 @@
 		7951A249148B07DB003548AC /* ELCImagePickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ELCImagePickerController.xib; sourceTree = "<group>"; };
 		7951A24E148B07DB003548AC /* Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Overlay.png; sourceTree = "<group>"; };
 		7951A24F148B07DB003548AC /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Overlay@2x.png"; sourceTree = "<group>"; };
+		7959A81114D0C3E600A8BB69 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		79635AD314904F820098C265 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7966FFFE14C77D3D00CFF39C /* liblibSwyp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = liblibSwyp.a; path = "../lib/swyp/libSwyp/build/Release-iphoneos/liblibSwyp.a"; sourceTree = "<group>"; };
 		796B8E0B14BE8F0E004FEBE3 /* connectivity-bluetooth-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "connectivity-bluetooth-disabled.png"; sourceTree = "<group>"; };
@@ -162,7 +163,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79FD02D514C77D5A00BD4382 /* liblibSwyp.a in Frameworks */,
 				7901263F14C37242005F423B /* GameKit.framework in Frameworks */,
 				79C50A60148B09FE000FDCA1 /* AssetsLibrary.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -173,6 +173,7 @@
 				79BDC494145A0B9E009C3541 /* Security.framework in Frameworks */,
 				79BDC496145A0C2E009C3541 /* CFNetwork.framework in Frameworks */,
 				79635AD414904F820098C265 /* SystemConfiguration.framework in Frameworks */,
+				7902D6AB14D4A68500C71731 /* liblibSwyp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +248,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7959A81114D0C3E600A8BB69 /* libstdc++.dylib */,
 				7966FFFE14C77D3D00CFF39C /* liblibSwyp.a */,
 				7901263D14C3723A005F423B /* GameKit.framework */,
 				79635AD314904F820098C265 /* SystemConfiguration.framework */,
@@ -363,7 +365,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				79FD02D414C77D5300BD4382 /* PBXTargetDependency */,
+				7902D6AD14D4A69600C71731 /* PBXTargetDependency */,
 			);
 			name = swyp;
 			productName = swypPhotos;
@@ -479,10 +481,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		79FD02D414C77D5300BD4382 /* PBXTargetDependency */ = {
+		7902D6AD14D4A69600C71731 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libSwyp;
-			targetProxy = 79FD02D314C77D5300BD4382 /* PBXContainerItemProxy */;
+			targetProxy = 7902D6AC14D4A69600C71731 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -493,6 +495,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -500,7 +503,11 @@
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swyp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_CPLUSPLUSFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = swyp;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 			};
@@ -516,12 +523,17 @@
 				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swyp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_CPLUSPLUSFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = swyp;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
@@ -556,12 +568,17 @@
 				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = swypPhotos_Prefix.pch;
 				HEADER_SEARCH_PATHS = "../lib/**";
 				INFOPLIST_FILE = "swyp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_CPLUSPLUSFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = swyp;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;

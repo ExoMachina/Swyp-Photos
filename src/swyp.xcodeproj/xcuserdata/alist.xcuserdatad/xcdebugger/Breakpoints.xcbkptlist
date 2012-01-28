@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypConnectionSession.m"
-         timestampString = "348544024.576386"
+         timestampString = "348883363.146861"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "330"
-         endingLineNumber = "330"
+         startingLineNumber = "337"
+         endingLineNumber = "337"
          landmarkName = "-stream:handleEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypConnectionSession.m"
-         timestampString = "348544024.576386"
+         timestampString = "348883363.146861"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "279"
-         endingLineNumber = "279"
+         startingLineNumber = "286"
+         endingLineNumber = "286"
          landmarkName = "-inputStreamDiscernerFinishedWithError:withDiscerner:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -79,12 +79,206 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypBluetoothPairManager.m"
-         timestampString = "348705785.116427"
+         timestampString = "348858087.885666"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "397"
-         endingLineNumber = "397"
+         startingLineNumber = "398"
+         endingLineNumber = "398"
          landmarkName = "-_peerIsInConnection:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypPhotoPlayground.m"
+         timestampString = "349032301.181655"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "97"
+         endingLineNumber = "97"
+         landmarkName = "-contentPanOccurredWithRecognizer:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libjingle/talk/examples/login/xmpppump.cc"
+         timestampString = "349410522.703097"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "75"
+         endingLineNumber = "75"
+         landmarkName = "XmppPump::SendStanza(const buzz::XmlElement *stanza)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypStreamsClient.mm"
+         timestampString = "349409172.824776"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
+         landmarkName = "OnStateChange(buzz::XmppEngine::State state)"
+         landmarkType = "7">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypStreamsClient.mm"
+         timestampString = "349409639.011486"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "22"
+         endingLineNumber = "22"
+         landmarkName = "swypStreamsClient::OnStateChange(buzz::XmppEngine::State state)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/jingle/libjingle/talk/base/physicalsocketserver.cc"
+         timestampString = "349410018.22496"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1172"
+         endingLineNumber = "1172"
+         landmarkName = "PhysicalSocketServer::CreateSocket(int type)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libjingle/talk/examples/login/xmppsocket.cc"
+         timestampString = "349481848.149719"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "178"
+         endingLineNumber = "178"
+         landmarkName = "XmppSocket::Connect(const talk_base::SocketAddress&amp; addr)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libjingle/talk/examples/login/xmppsocket.cc"
+         timestampString = "349413577.149562"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "113"
+         endingLineNumber = "113"
+         landmarkName = "XmppSocket::OnConnectEvent(talk_base::AsyncSocket * socket)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/jingle/libjingle/talk/base/thread.cc"
+         timestampString = "349410542.818891"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "535"
+         endingLineNumber = "535"
+         landmarkName = "AutoThread::~AutoThread()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libjingle/talk/examples/login/xmppsocket.cc"
+         timestampString = "349413577.149562"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "105"
+         endingLineNumber = "105">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/jingle/libjingle/talk/xmpp/xmppclient.cc"
+         timestampString = "349411536.090501"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "258"
+         endingLineNumber = "258"
+         landmarkName = "XmppClient::ProcessStartXmppLogin()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/jingle/libjingle/talk/base/physicalsocketserver.cc"
+         timestampString = "349411953.544245"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1290"
+         endingLineNumber = "1290"
+         landmarkName = "PhysicalSocketServer::Wait(int cmsWait, bool process_io)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/jingle/libjingle/talk/base/physicalsocketserver.cc"
+         timestampString = "349481292.064466"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1287"
+         endingLineNumber = "1287"
+         landmarkName = "PhysicalSocketServer::Wait(int cmsWait, bool process_io)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypCloudNetService.mm"
+         timestampString = "349481654.730156"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "135"
+         endingLineNumber = "135"
+         landmarkName = "-_setupXMPPConnection"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libjingle/talk/examples/login/xmppsocket.cc"
+         timestampString = "349481682.919612"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
+         landmarkName = "XmppSocket::XmppSocket(buzz::TlsOptions tls)"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
