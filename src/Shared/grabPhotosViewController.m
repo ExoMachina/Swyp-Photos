@@ -55,7 +55,7 @@
 
 -(swypWorkspaceViewController *)swypWorkspace{
 	if (_swypWorkspace == nil){
-		_swypWorkspace	=	[[swypWorkspaceViewController alloc] initWithWorkspaceDelegate:self];
+		_swypWorkspace	=	[[swypWorkspaceViewController alloc] init];
 		[_swypWorkspace.view setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
 		[_swypWorkspace.view setFrame:self.view.bounds];
 		
@@ -80,7 +80,7 @@
 }
 
 -(void) activateSwypButtonPressed:(id)sender{
-	[self presentModalViewController:[self swypWorkspace] animated:TRUE];
+	[[self swypWorkspace] presentContentWorkspaceAtopViewController:self];
 
 	//here is one way to avoid blocking the main thread when loading images
 	[[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -93,10 +93,6 @@
 
 -(void)frameActivateButtonWithSize:(CGSize)theSize {
     [_activateSwypButton setFrame:CGRectMake((([UIApplication currentSize].width)-theSize.width)/2, [UIApplication currentSize].height-theSize.height, theSize.width, theSize.height)];
-}
-
--(void)reframeActivateButton {
-    [self frameActivateButtonWithSize:_activateSwypButton.size];
 }
 
 #pragma mark - View lifecycle
@@ -133,7 +129,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    [self reframeActivateButton];
+    [self frameActivateButtonWithSize:_activateSwypButton.size];
 }
 
 - (void)viewDidUnload{
@@ -149,7 +145,7 @@
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    [self reframeActivateButton];
+    [self frameActivateButtonWithSize:_activateSwypButton.size];
     _activateSwypButton.alpha = 1;
 }
 
@@ -212,10 +208,6 @@
 	
 }
 #pragma mark - Swyp
--(void)	delegateShouldDismissSwypWorkspace: (swypWorkspaceViewController*)workspace{
-	[self dismissModalViewControllerAnimated:TRUE];
-}
-
 -(void) swypBackedPhotoDataSourceRecievedPhoto: (UIImage*) photo withDataSource: (swypBackedPhotoDataSource*)dataSource {
 	UIImageWriteToSavedPhotosAlbum(photo, nil, nil, nil);
 	

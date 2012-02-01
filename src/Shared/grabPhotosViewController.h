@@ -11,7 +11,7 @@
 #import <libswyp/libswyp.h>
 
 @class grabPhotosViewController;
-@interface grabPhotosViewController : UIViewController <swypWorkspaceDelegate,ELCImagePickerControllerDelegate, swypBackedPhotoDataSourceDelegate> {
+@interface grabPhotosViewController : UIViewController <ELCImagePickerControllerDelegate, swypBackedPhotoDataSourceDelegate> {
 	
 	ELCImagePickerController *		_imagePicker;
 	

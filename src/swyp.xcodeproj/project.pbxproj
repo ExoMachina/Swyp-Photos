@@ -63,6 +63,7 @@
 		79C6E1741438EB9800920C64 /* swypDraftIcon72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C6E1731438EB9800920C64 /* swypDraftIcon72.png */; };
 		79CA146114BA5E6700253F0C /* cloud-logo-enabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CA145D14BA5E6700253F0C /* cloud-logo-enabled.png */; };
 		79CA146214BA5E6700253F0C /* cloud-logo-enabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CA145E14BA5E6700253F0C /* cloud-logo-enabled@2x.png */; };
+		79CE44B614D8F4C4009EA4C0 /* swypWorkspaceBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 79CE44B514D8F4C4009EA4C0 /* swypWorkspaceBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,7 @@
 		79C6E1731438EB9800920C64 /* swypDraftIcon72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypDraftIcon72.png; path = ../resource/swypDraftIcon72.png; sourceTree = "<group>"; };
 		79CA145D14BA5E6700253F0C /* cloud-logo-enabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-logo-enabled.png"; sourceTree = "<group>"; };
 		79CA145E14BA5E6700253F0C /* cloud-logo-enabled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud-logo-enabled@2x.png"; sourceTree = "<group>"; };
+		79CE44B514D8F4C4009EA4C0 /* swypWorkspaceBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = swypWorkspaceBackground.png; path = ../../../../swypCards/swyp/swypBundleResources/swypWorkspaceBackground.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* swyp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "swyp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -308,6 +310,7 @@
 		797D6FFE143D04340086D446 /* swypBundleResources */ = {
 			isa = PBXGroup;
 			children = (
+				79CE44B514D8F4C4009EA4C0 /* swypWorkspaceBackground.png */,
 				7901265A14C38423005F423B /* swypPromptHud.png */,
 				7901265B14C38423005F423B /* swypPromptHud@2x.png */,
 				7901264014C3727D005F423B /* down_arrow.png */,
@@ -451,6 +454,7 @@
 				7901264714C3727D005F423B /* top_curl@2x.png in Resources */,
 				7901265C14C38423005F423B /* swypPromptHud.png in Resources */,
 				7901265D14C38423005F423B /* swypPromptHud@2x.png in Resources */,
+				79CE44B614D8F4C4009EA4C0 /* swypWorkspaceBackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

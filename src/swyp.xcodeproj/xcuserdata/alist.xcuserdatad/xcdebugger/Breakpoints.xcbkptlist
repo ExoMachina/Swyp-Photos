@@ -14,7 +14,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "337"
          endingLineNumber = "337"
-         landmarkName = "-stream:handleEvent:"
+         landmarkName = "-dataBridgeFailedYieldingDataFromInputStream:withError:inInputToDataBridge:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -42,7 +42,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "286"
          endingLineNumber = "286"
-         landmarkName = "-inputStreamDiscernerFinishedWithError:withDiscerner:"
+         landmarkName = "-concludedDiscernedStream:withDiscerner:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -177,39 +177,13 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libjingle/talk/examples/login/xmppsocket.cc"
-         timestampString = "349413577.149562"
+         timestampString = "349483385.303136"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "113"
-         endingLineNumber = "113"
+         startingLineNumber = "114"
+         endingLineNumber = "114"
          landmarkName = "XmppSocket::OnConnectEvent(talk_base::AsyncSocket * socket)"
          landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "0"
-         filePath = "/Users/alist/Documents/highFyve/dev/jingle/libjingle/talk/base/thread.cc"
-         timestampString = "349410542.818891"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "535"
-         endingLineNumber = "535"
-         landmarkName = "AutoThread::~AutoThread()"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "0"
-         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libjingle/talk/examples/login/xmppsocket.cc"
-         timestampString = "349413577.149562"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "105"
-         endingLineNumber = "105">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -259,11 +233,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypCloudNetService.mm"
-         timestampString = "349481654.730156"
+         timestampString = "349482631.119887"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "135"
-         endingLineNumber = "135"
+         startingLineNumber = "139"
+         endingLineNumber = "139"
          landmarkName = "-_setupXMPPConnection"
          landmarkType = "5">
       </FileBreakpoint>
@@ -272,14 +246,28 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "0"
-         filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libjingle/talk/examples/login/xmppsocket.cc"
-         timestampString = "349481682.919612"
+         filePath = "/Users/alist/Documents/highFyve/dev/jingle/libjingle/talk/base/physicalsocketserver.cc"
+         timestampString = "349482873.931865"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "51"
-         endingLineNumber = "51"
-         landmarkName = "XmppSocket::XmppSocket(buzz::TlsOptions tls)"
-         landmarkType = "5">
+         startingLineNumber = "121"
+         endingLineNumber = "121"
+         landmarkName = "resolver_(NULL)"
+         landmarkType = "7">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/alist/Documents/highFyve/dev/jingle/libjingle/talk/base/physicalsocketserver.cc"
+         timestampString = "349483205.79065"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "177"
+         endingLineNumber = "177"
+         landmarkName = "Bind(const SocketAddress&amp; addr)"
+         landmarkType = "7">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
