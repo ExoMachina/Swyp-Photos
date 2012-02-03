@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:swyp.xcodeproj">
+      location = "self:swypPhotos.xcodeproj">
    </FileRef>
 </Workspace>

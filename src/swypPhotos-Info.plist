@@ -15,7 +15,7 @@
 		<string>swypDraftIcon72.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.exomachina.swyp</string>
+	<string>com.exomachina.swypPhotos</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -34,10 +34,14 @@
 	<string>MainWindow_iPhone</string>
 	<key>NSMainNibFile~ipad</key>
 	<string>MainWindow_iPad</string>
-	<key>UIRequiresPersistentWiFi</key>
-	<false/>
 	<key>UIPrerenderedIcon</key>
 	<true/>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>peer-peer</string>
+	</array>
+	<key>UIRequiresPersistentWiFi</key>
+	<false/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -51,10 +55,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>peer-peer</string>
 	</array>
 </dict>
 </plist>
