@@ -56,8 +56,6 @@
 -(swypWorkspaceViewController *)swypWorkspace{
 	if (_swypWorkspace == nil){
 		_swypWorkspace	=	[[swypWorkspaceViewController alloc] init];
-		[_swypWorkspace.view setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
-		[_swypWorkspace.view setFrame:self.view.bounds];
 		
 		//this data source will link to the contentdisplayview controller through the content manager
 		//We're set as a delegate so we can can save photos we receive in a very simple way,
