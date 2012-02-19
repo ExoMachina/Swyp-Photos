@@ -91,9 +91,6 @@
 	
 }
 
--(void)frameActivateButtonWithSize:(CGSize)theSize {
-    [_activateSwypButton setFrame:CGRectMake((([UIApplication currentSize].width)-theSize.width)/2, [UIApplication currentSize].height-theSize.height, theSize.width, theSize.height)];
-}
 
 #pragma mark - View lifecycle
 - (void)didReceiveMemoryWarning
@@ -115,7 +112,9 @@
 	_activateSwypButton	=	[UIButton buttonWithType:UIButtonTypeCustom];
 	UIImage *	swypActivateImage	=	[UIImage imageNamed:@"swypPhotosHud"];
 	[_activateSwypButton setBackgroundImage:swypActivateImage forState:UIControlStateNormal];
-	[self frameActivateButtonWithSize:swypActivateImage.size];
+	[_activateSwypButton setSize:[swypActivateImage size]];
+    [_activateSwypButton setFrame:CGRectMake((([UIApplication currentSize].width)-_activateSwypButton.size.width)/2, [UIApplication currentSize].height-_activateSwypButton.size.height, _activateSwypButton.size.width, _activateSwypButton.size.height)];
+	[_activateSwypButton setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleLeftMargin];
 	[_activateSwypButton addTarget:self action:@selector(activateSwypButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     UISwipeGestureRecognizer *swipeUpRecognizer = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(activateSwypButtonPressed:)] autorelease];
@@ -129,7 +128,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    [self frameActivateButtonWithSize:_activateSwypButton.size];
 }
 
 - (void)viewDidUnload{
@@ -145,7 +143,6 @@
 }
 
 -(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    [self frameActivateButtonWithSize:_activateSwypButton.size];
     _activateSwypButton.alpha = 1;
 }
 

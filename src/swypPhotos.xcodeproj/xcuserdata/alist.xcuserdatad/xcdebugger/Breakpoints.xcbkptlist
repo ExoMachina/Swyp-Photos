@@ -9,12 +9,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypConnectionSession.m"
-         timestampString = "348544024.576386"
+         timestampString = "350113006.803503"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "330"
-         endingLineNumber = "330"
-         landmarkName = "-stream:handleEvent:"
+         startingLineNumber = "332"
+         endingLineNumber = "332"
+         landmarkName = "-dataBridgeFailedYieldingDataFromInputStream:withError:inInputToDataBridge:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -23,13 +23,13 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypHandshakeManager.m"
-         timestampString = "348460069.674219"
+         timestampString = "350224806.379072"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "415"
-         endingLineNumber = "415"
-         landmarkName = "-_postNegotiationSessionHandOff:"
-         landmarkType = "5">
+         startingLineNumber = "416"
+         endingLineNumber = "416"
+         landmarkName = "@implementation swypHandshakeManager"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -37,12 +37,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/Users/alist/Documents/highFyve/dev/swypPhotos/lib/swyp/libSwyp/swypConnectionSession.m"
-         timestampString = "348544024.576386"
+         timestampString = "350113006.803503"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "279"
-         endingLineNumber = "279"
-         landmarkName = "-inputStreamDiscernerFinishedWithError:withDiscerner:"
+         startingLineNumber = "281"
+         endingLineNumber = "281"
+         landmarkName = "-discernedStream:withDiscerner:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
