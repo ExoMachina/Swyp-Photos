@@ -68,12 +68,6 @@
         
         SRELS(photoDatasource);
 		
-		//we create our favorite content display controller
-		//we'll be adding data later see (elcImagePickerController:didFinishPickingMediaWithInfo:)
-		swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] initWithPhotoSize:CGSizeMake(140, 200)];
-
-		[[[self swypWorkspace] contentManager] setContentDisplayController:contentDisplayController];
-		SRELS(contentDisplayController);
 	}
     
 	return _swypWorkspace;
