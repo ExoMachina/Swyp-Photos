@@ -63,6 +63,7 @@
 		swypBackedPhotoDataSource *	photoDatasource	= [[swypBackedPhotoDataSource alloc] initWithBackingDelegate:self];	
 		//make sure to set the data-source! If there are bugs, you should submit a pull-request!
 		[[[self swypWorkspace] contentManager] setContentDataSource:photoDatasource];
+		[[[self swypWorkspace] contentManager] addDataDelegate:photoDatasource];
         
         SRELS(photoDatasource);
 		
