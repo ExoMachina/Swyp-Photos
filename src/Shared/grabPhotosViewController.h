@@ -11,11 +11,13 @@
 #import <libswyp/libswyp.h>
 
 @class grabPhotosViewController;
-@interface grabPhotosViewController : UIViewController <swypWorkspaceDelegate,ELCImagePickerControllerDelegate, swypBackedPhotoDataSourceDelegate> {
+@interface grabPhotosViewController : UIViewController <ELCImagePickerControllerDelegate, swypBackedPhotoDataSourceDelegate> {
 	
 	ELCImagePickerController *		_imagePicker;
 	
 	swypWorkspaceViewController *	_swypWorkspace;
+    
+    UIButton                    *   _activateSwypButton;
 }
 @property (nonatomic, readonly) swypWorkspaceViewController * swypWorkspace;
 

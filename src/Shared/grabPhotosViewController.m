@@ -10,6 +10,38 @@
 #import "cameraEnabledAlbumPickerController.h"
 #import "ELCAssetTablePicker.h"
 
+// To deal with rotation madness
+@interface UIApplication (AppDimensions)
++(CGSize) currentSize;
++(CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation;
+@end
+
+@implementation UIApplication (AppDimensions)
+
++(CGSize) currentSize
+{
+    return [UIApplication sizeInOrientation:[UIApplication sharedApplication].statusBarOrientation];
+}
+
++(CGSize) sizeInOrientation:(UIInterfaceOrientation)orientation
+{
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    UIApplication *application = [UIApplication sharedApplication];
+    if (UIInterfaceOrientationIsLandscape(orientation))
+    {
+        size = CGSizeMake(size.height, size.width);
+    }
+    if (application.statusBarHidden == NO)
+    {
+        size.height -= MIN(application.statusBarFrame.size.width, application.statusBarFrame.size.height);
+    }
+    return size;
+}
+
+@end
+
+// The main show
+
 @implementation grabPhotosViewController
 @synthesize swypWorkspace = _swypWorkspace;
 
@@ -21,40 +53,37 @@
     return self;
 }
 
--(swypWorkspaceViewController*)swypWorkspace{
+-(swypWorkspaceViewController *)swypWorkspace{
 	if (_swypWorkspace == nil){
-		_swypWorkspace	=	[[swypWorkspaceViewController alloc] initWithWorkspaceDelegate:self];
-		[_swypWorkspace.view setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
-		[_swypWorkspace.view setFrame:self.view.bounds];
+		_swypWorkspace	=	[[swypWorkspaceViewController alloc] init];
 		
-		//this just makes it so your photos appear in background before you swyp to another device
-		//otherwise you'll be swyping to create a connection, then swyping the image
-		[_swypWorkspace setShowContentWithoutConnection:TRUE];
-
 		//this data source will link to the contentdisplayview controller through the content manager
 		//We're set as a delegate so we can can save photos we receive in a very simple way,
 		//but see the protocols that swypPhotoArrayDatasource conforms to if you want to create custom data sources; EG, for core data
 		swypBackedPhotoDataSource *	photoDatasource	= [[swypBackedPhotoDataSource alloc] initWithBackingDelegate:self];	
 		//make sure to set the data-source! If there are bugs, you should submit a pull-request!
 		[[[self swypWorkspace] contentManager] setContentDataSource:photoDatasource];
+		[[[self swypWorkspace] contentManager] addDataDelegate:photoDatasource];
+        
+        SRELS(photoDatasource);
 		
-		//we create our favorite content display controller
-		//we'll be adding data later see (elcImagePickerController:didFinishPickingMediaWithInfo:)
-		swypPhotoPlayground *	contentDisplayController	=	[[swypPhotoPlayground alloc] initWithPhotoSize:CGSizeMake(200, 200)];
-
-		[[[self swypWorkspace] contentManager] setContentDisplayController:contentDisplayController];
-		SRELS(contentDisplayController);
 	}
+    
 	return _swypWorkspace;
 }
 
 -(void) activateSwypButtonPressed:(id)sender{
-	if ([[_imagePicker topViewController] isKindOfClass:[ELCAssetTablePicker class]]){
-		[(ELCAssetTablePicker*)[_imagePicker topViewController] doneAction:self];
-	}
+	[[self swypWorkspace] presentContentWorkspaceAtopViewController:self];
+
+	//here is one way to avoid blocking the main thread when loading images
+	[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+		if ([[_imagePicker topViewController] isKindOfClass:[ELCAssetTablePicker class]]){
+			[(ELCAssetTablePicker*)[_imagePicker topViewController] performSelectorOnMainThread:@selector(doneAction:) withObject:self waitUntilDone:YES];
+		}
+	}];
 	
-	[self presentModalViewController:[self swypWorkspace] animated:TRUE];
 }
+
 
 #pragma mark - View lifecycle
 - (void)didReceiveMemoryWarning
@@ -63,40 +92,62 @@
 }
 - (void)viewDidLoad{
     [super viewDidLoad];
-	
+    	
 	cameraEnabledAlbumPickerController *albumController = [[cameraEnabledAlbumPickerController alloc] initWithNibName:@"ELCAlbumPickerController" bundle:[NSBundle mainBundle]];    
 	_imagePicker = [[ELCImagePickerController alloc] initWithRootViewController:albumController];
     [albumController setParent:_imagePicker];
 	[_imagePicker setDelegate:self];
-	
-	[_imagePicker.view setOrigin:CGPointMake(0, -20)];
-	
+		
 	[self.view addSubview:_imagePicker.view];
 	[self addChildViewController:_imagePicker];
 	SRELS(albumController);
 	
-	UIButton *	activateSwypButton	=	[UIButton buttonWithType:UIButtonTypeCustom];
+	_activateSwypButton	=	[UIButton buttonWithType:UIButtonTypeCustom];
 	UIImage *	swypActivateImage	=	[UIImage imageNamed:@"swypPhotosHud"];
-	[activateSwypButton setBackgroundImage:swypActivateImage forState:UIControlStateNormal];
-	[activateSwypButton setFrame:CGRectMake((self.view.size.width-[swypActivateImage size].width)/2, self.view.size.height-[swypActivateImage size].height, [swypActivateImage size].width, [swypActivateImage size].height)];
-	[activateSwypButton addTarget:self action:@selector(activateSwypButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-	[self.view addSubview:activateSwypButton];
+	[_activateSwypButton setBackgroundImage:swypActivateImage forState:UIControlStateNormal];
+	[_activateSwypButton setSize:[swypActivateImage size]];
+    [_activateSwypButton setFrame:CGRectMake((([UIApplication currentSize].width)-_activateSwypButton.size.width)/2, [UIApplication currentSize].height-_activateSwypButton.size.height, _activateSwypButton.size.width, _activateSwypButton.size.height)];
+	[_activateSwypButton setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleLeftMargin];
+	[_activateSwypButton addTarget:self action:@selector(activateSwypButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UISwipeGestureRecognizer *swipeUpRecognizer = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(activateSwypButtonPressed:)] autorelease];
+    swipeUpRecognizer.direction = UISwipeGestureRecognizerDirectionUp;
+    
+    [_activateSwypButton addGestureRecognizer:swipeUpRecognizer];
+    
+	[self.view addSubview:_activateSwypButton];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
 }
 
 - (void)viewDidUnload{
     [super viewDidUnload];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
-
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return YES;
 }
 
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    _activateSwypButton.alpha = 0;
+}
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    _activateSwypButton.alpha = 1;
+}
+
 #pragma mark - Image resizing for high-speed
+
+// This should be done using GCD.
 -(UIImage*)	constrainImage:(UIImage*)image toSize:(CGSize)maxSize{
 	if (image == nil)
 		return nil;
 	
+#pragma mark TODO: replace this with threadable code
+	//CGBitmap will help us out in the future
 	CGSize oversize = CGSizeMake([image size].width - maxSize.width, [image size].height - maxSize.height);
 	
 	CGSize iconSize			=	CGSizeZero;
@@ -132,10 +183,14 @@
 	swypBackedPhotoDataSource *	photoDatasource	= (swypBackedPhotoDataSource*) [[[self swypWorkspace] contentManager] contentDataSource];
 	
 	[photoDatasource removeAllPhotos];
-	for(NSDictionary *dict in info) {
+    
+	for (NSDictionary *dict in info) {
 		UIImage *image =	[dict objectForKey:UIImagePickerControllerOriginalImage];
-#warning: this image is so small
-		[photoDatasource addUIImage:[self constrainImage:image toSize:CGSizeMake(220, 350)] atIndex:0];
+
+		//here is one way to avoid blocking the main thread when loading images
+		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+			[photoDatasource addUIImage:[self constrainImage:image toSize:CGSizeMake(1000, 1000)] atIndex:0];
+		}];
 	}
 	
 }
@@ -143,11 +198,7 @@
 	
 }
 #pragma mark - Swyp
--(void)	delegateShouldDismissSwypWorkspace: (swypWorkspaceViewController*)workspace{
-	[self dismissModalViewControllerAnimated:TRUE];
-}
-
--(void) swypBackedPhotoDataSourceRecievedPhoto: (UIImage*) photo withDataSource: (swypBackedPhotoDataSource*)dataSource{
+-(void) swypBackedPhotoDataSourceRecievedPhoto: (UIImage*) photo withDataSource: (swypBackedPhotoDataSource*)dataSource {
 	UIImageWriteToSavedPhotosAlbum(photo, nil, nil, nil);
 	
 	UIView * flashView	= [[UIView alloc] initWithFrame:[self swypWorkspace].view.frame];
